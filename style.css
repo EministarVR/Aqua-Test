@@ -1,0 +1,846 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #2b2b2b;
+}
+
+.container {
+    width: 100%;
+}
+
+@font-face {
+    font-family: VampireWars;
+    src: url(../font/Vampire\ Wars.ttf);
+}
+
+.bannerTop {
+    background-image: url(../img/bild-1.png);
+    width: 100%;
+    height: 380px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo {
+    padding-top: 3vh;
+    display: flex;
+    justify-content: center;
+}
+.custom-notification {
+    display: inline-block; /* Ensures it stays inline with text */
+    background-color: #ffcc00; /* Example background color */
+    color: #000; /* Text color */
+    border-radius: 12px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for better visibility */
+    font-weight: bold; /* Make the text bold */
+    margin-left: 5px; /* Space between text and count */
+}
+.logo img {
+    height: 260px;
+}
+@keyframes logoZoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logo {
+    padding-top: 3vh;
+    display: flex;
+    justify-content: center;
+    animation: logoZoom 3.5s infinite; /* Hier wird die Animation hinzugefügt */
+}
+.bannerTop {
+    background-image: url(../img/image_\(3\)-iMMl0SK8x-transformed.png); /* Bildpfad aktualisiert */
+    width: 100%;
+    height: 380px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.button-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the containers */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+.custom-container {
+    background-color: #1e1e1e; /* Example background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for content */
+    width: 48%; /* Adjust width as needed */
+    position: relative; /* For positioning of inner elements */
+}
+
+.custom-text {
+    color: #fff; /* Text color */
+}
+
+.custom-play-button {
+    background-color: #ffcc00; /* Button background color */
+    border-radius: 5px; /* Rounded corners for button */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer on hover */
+    display: flex; /* Flexbox for icon and notification */
+    align-items: center; /* Center items vertically */
+}
+
+
+.bannerTop a {
+    text-decoration: none;
+}
+
+.bannerTop p {
+    font-size: 60px;
+    color: #ff0000;
+    font-family: VampireWars;
+    display: flex;
+    justify-content: center;
+    margin-top: -173px;
+}
+
+.serverIp {
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+    background-color: darkorange;
+    padding: 4px;
+    color: black;
+    font-weight: bolder;
+}
+
+.serverStatus {
+    font-weight: bold;
+
+}
+/* Für das Hamburger-Menü */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(255, 180, 41);
+    text-align: center;
+    margin: 10px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* Standardmäßig ausgeblendet */
+}
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+        background-color: #2b2b2b;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+}
+
+.playersOn {
+    font-weight: bold;
+    color: blue;
+}
+
+.playersMax {
+    font-weight: bold;
+    color: blue;
+}
+
+.serverIpText {
+    font-weight: bold;
+    color: white;
+}
+
+.bar {
+    height: 5px;
+    background-color: rgb(168, 93, 0);
+}
+
+.clear {
+    clear: both;
+}
+
+.menu {
+    margin-top: -90px;
+}
+
+.menu ul {
+    text-align: center;
+    padding: 20px;
+}
+
+.menu li {
+    display: inline;
+    padding: 50px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(255, 180, 41);
+    font-family: VampireWars;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.barTwo {
+    height: 5px;
+    background-color: rgb(168, 93, 0);
+}
+
+.homeGallery {
+    margin: 50px;
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.textHGtwo {
+    font-size: 30px;
+    color: white;
+    text-align: end;
+    padding-right: 40px;
+    padding-top: 190px;
+    font-family: VampireWars;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+
+/* Mobile Viewport Adjustments */
+@media (max-width: 768px) {
+    .logo img {
+        height: 200px; /* Reduce logo size */
+    }
+
+    .bannerTop p {
+        font-size: 40px; /* Smaller font size for mobile */
+        margin-top: -100px; /* Adjust margin for better placement */
+    }
+
+    .menu li {
+        padding: 10px; /* Reduce padding for menu items */
+    }
+
+    .menu a {
+        font-size: 20px; /* Smaller font size for links */
+    }
+
+    .custom-container {
+        margin: 20px; /* Reduce margin for containers */
+        width: 90%; /* Use more width */
+        height: auto; /* Allow height to be flexible */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+
+    .infoServer {
+        font-size: 16px; /* Adjust font size for server info */
+        margin-left: 0; /* Center align text */
+    }
+
+    .infoImage img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .homeGallery {
+        margin: 20px 0; /* Reduce margins for gallery */
+    }
+
+    .textHGtwo, .textHGone {
+        font-size: 24px; /* Smaller text for mobile */
+        text-align: center; /* Center align text */
+    }
+
+    .butBoxDiscord {
+        margin-top: 10px; /* Adjust margin for buttons */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .comments {
+        display: none; /* Hide comments section on mobile */
+    }
+
+    .butIconDiscord img {
+        width: 50px; /* Smaller icon size */
+    }
+}
+
+/* Navigation Menu Adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        width: 100%; /* Full width for mobile navigation */
+    }
+
+    .nav-links li {
+        padding: 10px; /* Increase padding for touch targets */
+        border-bottom: 1px solid #444; /* Clear separation between items */
+    }
+
+    .hamburger {
+        margin: 10px; /* Add margin for better touch area */
+    }
+}
+
+/* Button Adjustments */
+@media (max-width: 768px) {
+    .custom-play-button {
+        padding: 15px; /* Increase padding for better touch */
+        font-size: 18px; /* Adjust font size for buttons */
+    }
+}
+
+/* Content Layout Adjustments */
+@media (max-width: 768px) {
+    .middleSection {
+        padding: 20px; /* Reduce padding for mobile */
+    }
+
+    .bannermiddle {
+        width: 100%; /* Full width for banner */
+        margin-bottom: 20px; /* Space between sections */
+    }
+}
+.textHGone {
+    font-size: 30px;
+    color: white;
+    text-align: end;
+    padding-right: 40px;
+    padding-top: 190px;
+    font-family: VampireWars;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+.hg1 {
+    border-right: #2b2b2b solid 2.5px;
+    background-image: url(../img/bild-7.png);
+    float: left;
+    height: 250px;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 15px;
+}
+
+.hg2 {
+    border-left: #2b2b2b solid 2.5px;
+    background-image: url(../img/bild-4.png);
+    float: right;
+    height: 250px;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-right-radius: 15px;
+}
+
+.hg3 {
+    border-top: #2b2b2b solid 5px;
+    background-image: url(../img/bild-6.png);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.middleSection {
+    background-color: #2b2b2b;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.bannermiddle {
+    height: 400px;
+    padding-top: 40px;
+    width: 50%;
+    float: left;
+    margin-bottom: 40px;
+}
+
+.infoServer {
+    text-align: center;
+    list-style-position: inside;
+    border-radius: 15px;
+    font-family: 'Play', sans-serif;
+    font-size: 18px;
+    padding: 30px;
+    margin-left: 40vh;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+li {
+    color: white;
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+    list-style: none;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+.infoImage {
+    float: right;
+}
+
+.infoImage img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 270px;
+    margin-right: 40vh;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.comments {
+    background-color: orange;
+}
+
+.co {
+    float: left;
+    width: 33.33%;
+    height: 250px;
+    text-align: center;
+    padding: 50px;
+    padding-top: 30px;
+    background-color: orange;
+}
+
+.co img {
+    width: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    padding-bottom: 10px;
+}
+
+.cotitle {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+.cotext {
+    padding-top: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Play', sans-serif;
+}
+
+.buttonsSocial {
+    background-image: url(../img/loadingOrNot.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    height: 200px;
+}
+
+.butBox {
+    padding: 70px;
+}
+
+.butIcon {
+    float: left;
+    margin-right: 80px;
+}
+
+.butIcon img {
+    width: 64px;
+}
+
+.butBoxDiscord {
+    margin-top: -30px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+    background-color: #2b2b2b;
+    padding: 30px;
+    border-radius: 15px;
+    float: right;
+}
+
+.butIconDiscord img {
+    width: 60px;
+    float: right;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1A1A1A;
+}
+
+.custom-container {
+    margin: 40px; /* Increased margin for better placement */
+    width: 320px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 10; /* Ensure it is above other content */
+}
+
+.custom-text {
+    color: white;
+}
+
+.custom-text h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.custom-text p {
+    margin: 0;
+    font-size: 16px;
+    color: #BDC3C7;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    animation: slideInLeft 1s ease-in-out;
+}
+
+
+.custom-play-button:hover {
+    transform: scale(1.1);
+}
+
+
+
+.button-container {
+    display: flex; /* Flexbox to align items horizontally */
+    justify-content: space-around; /* Even spacing */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    70% {
+        transform: translateY(-5px);
+    }
+    90% {
+        transform: translateY(-2px);
+    }
+}
+footer {
+    text-align: center;
+    background-color: darkcyan;
+    color: white;
+    font-size: 15px;
+    font-family: 'Play', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer p {
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 1556px) {
+
+    .infoImage img {
+        margin-right: 20vh;
+    }
+
+    .infoServer {
+        margin-left: 20vh;
+    }
+
+}
+
+@media screen and (max-width: 1302px) {
+
+    .infoImage img {
+        margin-right: 10vh;
+    }
+
+    .infoServer {
+        margin-left: 10vh;
+    }
+
+    .butBoxDiscord {
+        margin-top: -40px;
+    }
+
+    .butIcon {
+        margin-right: 40px;
+    }
+
+}
+
+@media screen and (max-width: 1146px) {
+
+    .infoImage img {
+        margin-right: 5vh;
+    }
+
+    .infoServer {
+        margin-left: 5vh;
+    }
+
+    .butBoxDiscord {
+        margin-top: -30px;
+        font-size: 0px;
+        background-color: #2b2b2b00;
+        float: left;
+    }
+
+    .butIcon {
+        float: left;
+        margin-right: 150px;
+    }
+
+}
+
+@media screen and (max-width: 1132px) {
+
+    .butBox {
+        padding-top: 70px;
+    }
+
+    .butIcon {
+        float: none;
+        display: inline;
+        margin-right: 15%;
+    }
+
+    .butBoxDiscord {
+        margin-top: -100px;
+        font-size: 0px;
+        background-color: #2b2b2b00;
+        float: none;
+    }
+
+}
+
+@media screen and (max-width: 1079px) {
+
+    .butBox {
+        padding: 30px;
+        padding-top: 70px;
+    }
+
+    .butIcon {
+        margin-right: 15%;
+    }
+
+    .menu li {
+        display: inline;
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 860px) {
+
+    .homeGallery {
+        margin: 0px;
+        margin-top: 90px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .textHGtwo {
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        padding-right: 40px;
+        padding-top: 190px;
+        font-family: VampireWars;
+        text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+    }
+    
+    .textHGone {
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        padding-right: 40px;
+        padding-top: 190px;
+        font-family: VampireWars;
+        text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+    }
+    
+    .hg1 {
+        border-right: none;
+        float: none;
+        width: 100%;
+        border-top-left-radius: 0px;
+    }
+    
+    .hg2 {
+        border-left: none;
+        float: none;
+        width: 100%;
+        border-top-right-radius: 0px;
+    }
+    
+    .hg3 {
+        border-top: none;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .infoImage img {
+        margin-right: 0vh;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    .butIcon {
+        margin-right: 13%;
+    }
+
+    .infoImage img {
+        margin-right: 0vh;
+    }
+
+    .infoServer {
+        margin-left: 0vh;
+    }
+
+    .menu li {
+        display: inline;
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width: 757px) {
+
+    .butIcon {
+        margin-right: 10%;
+    }
+
+    .infoImage {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .menu {
+        margin-top: -100px;
+    }
+    
+    .menu li {
+        display: inline;
+        padding: 10px;
+    }
+
+    .menu a{
+        font-size: 27px;
+    }
+    
+    .bannermiddle {
+        width: 100%;
+    }
+
+    .comments{
+        display: none;
+    }
+
+    .butIconDiscord img {
+        width: 60px;
+        float: right;
+        margin-right: -30px;
+    }
+
+}
+
+
+@media screen and (max-width: 560px) {
+    .butIcon {
+        margin-right: 5%;
+    }
+
+    .infoImage {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 65%;
+    }
+
+}
