@@ -168,6 +168,21 @@ body {
     background-color: #555;
     transform: scale(1.05);
 }
+/* Schriftart für Desktop-Navigation */
+@font-face {
+    font-family: 'VampireWars';
+    src: url('VampireWars.ttf') format('truetype');
+}
+
+@media screen and (min-width: 1024px) {
+    .menu a {
+        font-family: 'VampireWars', sans-serif;
+        text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+        font-size: 30px;
+        color: rgb(255, 180, 41);
+        text-decoration: none;
+    }
+}
 
 /* Media Queries */
 @media (min-width: 768px) {
