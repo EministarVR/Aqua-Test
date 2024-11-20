@@ -54,150 +54,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMg9M7q1D6G4T0xF1I6gu/6huHnZTmeYoHa0fD" crossorigin="anonymous">
   
 </head>
-<style>
-/* Global Styles */
-/* Global Styles */
 
-
-/* Desktop Navigation */
-.desktop-nav {
-    display: none; /* Versteckt die Desktop-Navigation standardmäßig */
-}
-
-.desktop-nav ul {
-    text-align: center;
-    padding: 20px;
-}
-
-.desktop-nav li {
-    display: inline;
-    padding: 50px;
-}
-
-.desktop-nav a {
-    text-decoration: none;
-    font-size: 30px;
-    color: rgb(255, 180, 41);
-    font-family: 'VampireWars', sans-serif;
-    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
-}
-
-/* Mobile Navigation */
-.menu {
-    position: relative;
-    z-index: 1000;
-}
-
-/* Hamburger Icon */
-.hamburger {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 40px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.hamburger .burger {
-    width: 100%;
-    height: 5px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-/* Mobile Nav Links */
-.nav-links {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #2a2a2a;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: top 0.3s ease;
-}
-
-.nav-links.active {
-    top: 0;
-}
-
-.nav-links .logo {
-    width: 150px;
-    margin-bottom: 20px;
-}
-
-.nav-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-.nav-links ul li {
-    margin: 10px 0;
-}
-
-.nav-links ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    padding: 15px;
-    text-align: center;
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    background-color: #444;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-links ul li a:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-/* Schriftart für Desktop-Navigation */
-@font-face {
-    font-family: 'VampireWars';
-    src: url('VampireWars.ttf') format('truetype');
-}
-
-@media screen and (min-width: 1024px) {
-    .menu a {
-        font-family: 'VampireWars', sans-serif;
-        text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
-        font-size: 30px;
-        color: rgb(255, 180, 41);
-        text-decoration: none;
-    }
-}
-
-/* Media Queries */
-@media (min-width: 768px) {
-    .desktop-nav {
-        display: block; /* Zeigt die Desktop-Navigation ab einer Breite von 768px */
-    }
-    .menu {
-        display: none; /* Versteckt das Hamburger-Menü auf großen Bildschirmen */
-    }
-}
-
-@media (max-width: 767px) {
-    .desktop-nav {
-        display: none; /* Versteckt die Desktop-Navigation auf mobilen Geräten */
-    }
-}
-
-
-
-</style>
 <body>
 <div class="bar"></div>
 
@@ -210,37 +67,38 @@
 
 <div class="barTwo"></div>
 
-
-  
-<!-- Desktop Navigation -->
-<div class="desktop-nav">
-    <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./news.html">News</a></li>
-        <li><a href="./information.html">Info</a></li>
-        <li><a href="./shop.html">Shop</a></li>
-        <li><a href="./help.html">Support</a></li>
-    </ul>
-</div>
-
-<!-- Mobile Navigation with Hamburger Menu -->
-<div class="menu">
-    <div class="hamburger" id="hamburger">
-        <div class="burger"></div>
-        <div class="burger"></div>
-        <div class="burger"></div>
+<body>
+    <!-- Desktop Navigation -->
+    <div class="desktop-nav">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./news.html">News</a></li>
+                <li><a href="./information.html">Information</a></li>
+                <li><a href="./shop.html">Shop</a></li>
+                <li><a href="./help.html">Support</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav id="navLinks" class="nav-links">
-        <img src="logo.png" alt="Logo" class="logo">
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./news.html">News</a></li>
-            <li><a href="./information.html">Info</a></li>
-            <li><a href="./shop.html">Shop</a></li>
-            <li><a href="./help.html">Support</a></li>
-        </ul>
-    </nav>
-</div>
+
+    <!-- Mobile Navigation with Hamburger Menu -->
+    <div class="menu">
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav id="navLinks" class="nav-links">
+            <img src="logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./news.html">News</a></li>
+                <li><a href="./information.html">Info</a></li>
+                <li><a href="./shop.html">Shop</a></li>
+                <li><a href="./help.html">Support</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+
+
 
 <div class="button-container">
     <div class="custom-container">
@@ -365,7 +223,7 @@
     </div>
 
     <div class="infoImage">
-        <img src="6E52609D-7E7D-40AD-8E33-C7A43D01B345.png" alt="Server Image">
+        <img src="img/6E52609D-7E7D-40AD-8E33-C7A43D01B345.png" alt="Server Image">
     </div>
 
     <div class="clear"></div>
@@ -402,13 +260,13 @@
 </footer>
 
 <script>
+
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
-
 
    </script>
 
