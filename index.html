@@ -56,38 +56,101 @@
 </head>
 <style>
  @media (max-width: 768px) {
-            .hamburger {
-                display: block; /* Show hamburger on mobile */
-            }
+           body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-            .nav-links {
-                display: none; /* Hide navigation links by default */
-                flex-direction: column; /* Stack items vertically */
-                width: 100%;
-                background-color: #444; /* Background color for dropdown */
-                position: absolute;
-                top: 60px; /* Adjust based on your layout */
-                left: 0;
-                z-index: 1000; /* Ensure it is above other content */
-            }
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+}
 
-            .nav-links.active {
-                display: flex; /* Show when active */
-            }
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
-            .nav-links ul {
-                flex-direction: column; /* Stack items vertically */
-                width: 100%; /* Full width */
-            }
+.menu ul li {
+    margin: 0 10px;
+}
 
-            .nav-links li {
-                text-align: center; /* Center align text */
-                padding: 10px; /* Adjust padding for mobile */
-                border-bottom: 1px solid #555; /* Divider between items */
-            }
-        }
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
+.menu ul li a:hover {
+    color: #ffcc00;
+}
 
+/* Desktop-Navigation */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* Hamburger für Desktop ausblenden */
+    }
+
+    .nav-links {
+        display: flex; /* Desktop-Links immer anzeigen */
+        flex-direction: row;
+    }
+
+    .nav-links ul {
+        flex-direction: row; /* Horizontale Links */
+    }
+
+    .nav-links li {
+        margin: 0 15px;
+    }
+}
+
+/* Mobile-Navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Hamburger sichtbar machen */
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none; /* Navigation standardmäßig ausblenden */
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex; /* Navigation anzeigen, wenn aktiv */
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Vertikale Links */
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid #555;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none; /* Kein Rand für das letzte Element */
+    }
+}
 
 </style>
 <body>
@@ -114,7 +177,6 @@
         </ul>
     </nav>
 </div>
-
 
 
 
@@ -258,15 +320,10 @@
 
 <script>
 
-// Get the hamburger menu and navigation links
-const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-
-        // Add click event listener to the hamburger menu
-        hamburger.addEventListener('click', () => {
-            // Toggle the 'active' class on the nav-links
-            navLinks.classList.toggle('active');
-        });
+document.getElementById("hamburger").addEventListener("click", function () {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active"); // Navigation ein-/ausblenden
+});
 
 
 
