@@ -56,15 +56,16 @@
 </head>
 <style>
 /* Allgemeine Stile */
+/* Body */
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: #0d1117; /* Tiefdunkles Hintergrunddesign */
-    color: #ffffff; /* Standard Textfarbe */
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #ffffff;
     overflow-x: hidden;
 }
 
-/* Hamburger Menü */
+/* Hamburger-Menü */
 .menu {
     position: relative;
     z-index: 1000;
@@ -77,24 +78,25 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 35px;
+    width: 40px;
     height: 30px;
     cursor: pointer;
     z-index: 1001;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
 .hamburger span {
     display: block;
     width: 100%;
     height: 4px;
-    background: #ffffff; /* Weiß für starken Kontrast */
+    background: linear-gradient(90deg, #ff007f, #00d4ff);
     border-radius: 10px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
+    box-shadow: 0px 0px 6px rgba(255, 0, 127, 0.6);
 }
 
-/* Animation für Hamburger zu X */
+/* Animation: Hamburger -> X */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translateY(10px);
 }
@@ -105,14 +107,14 @@ body {
     transform: rotate(-45deg) translateY(-10px);
 }
 
-/* Menü */
+/* Menü-Hintergrund */
 .nav-links {
     position: fixed;
     top: 0;
     left: 100%;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #1c1f26, #3a3f4b); /* Schöner Farbverlauf */
+    background: radial-gradient(circle, #1e1e1e, #121212);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,12 +122,14 @@ body {
     transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: translateX(0);
     z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 .nav-links.active {
     transform: translateX(-100%);
 }
 
+/* Links */
 .nav-links ul {
     list-style: none;
     padding: 0;
@@ -134,46 +138,52 @@ body {
 }
 
 .nav-links ul li {
-    margin: 20px 0;
+    margin: 15px 0;
     animation: fadeIn 0.5s ease forwards;
     opacity: 0;
 }
 
 .nav-links ul li:nth-child(1) {
-    animation-delay: 0.2s;
+    animation-delay: 0.3s;
 }
 .nav-links ul li:nth-child(2) {
-    animation-delay: 0.4s;
+    animation-delay: 0.5s;
 }
 .nav-links ul li:nth-child(3) {
-    animation-delay: 0.6s;
+    animation-delay: 0.7s;
 }
 .nav-links ul li:nth-child(4) {
-    animation-delay: 0.8s;
+    animation-delay: 0.9s;
 }
 .nav-links ul li:nth-child(5) {
-    animation-delay: 1s;
+    animation-delay: 1.1s;
 }
 
 .nav-links ul li a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(90deg, rgba(255, 0, 127, 0.8), rgba(0, 212, 255, 0.8));
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.6);
+    overflow: hidden;
 }
 
 .nav-links ul li a:hover {
-    color: #00ccff; /* Strahlendes Blau */
-    transform: scale(1.1); /* Leichte Vergrößerung */
+    transform: scale(1.2) rotate(2deg);
+    color: #0f0f0f;
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.8);
 }
 
 /* Animation */
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     100% {
         opacity: 1;
@@ -181,7 +191,7 @@ body {
     }
 }
 
-/* Nur für Handys */
+/* Responsive Design */
 @media (min-width: 768px) {
     .hamburger {
         display: none;
@@ -190,6 +200,7 @@ body {
         display: none;
     }
 }
+
 
 </style>
 <body>
@@ -214,16 +225,15 @@ body {
     </div>
     <nav id="navLinks" class="nav-links">
         <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./news.html">News</a></li>
-            <li><a href="./information.html">Information</a></li>
-            <li><a href="./shop.html">Shop</a></li>
-            <li><a href="./help.html">Support</a></li>
+            <li><a href="./index.html">🏠 Home</a></li>
+            <li><a href="./news.html">📰 News</a></li>
+            <li><a href="./information.html">ℹ️ Info</a></li>
+            <li><a href="./shop.html">🛒 Shop</a></li>
+            <li><a href="./help.html">📞 Support</a></li>
         </ul>
     </nav>
 </div>
-
-   
+  
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7CVNSWW2"></script>
 <script>
