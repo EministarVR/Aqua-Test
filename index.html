@@ -63,6 +63,7 @@ body {
     color: #fff;
 }
 
+/* Menü Container */
 .menu {
     position: relative;
     z-index: 1000;
@@ -72,32 +73,42 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Runder Button */
+    background-color: #444; /* Mittelgrau für den Hintergrund des Buttons */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 24px;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     z-index: 1001;
-}
-
-.hamburger span {
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #fff; /* Weiße Striche für das Hamburger Icon */
-    border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
-/* Active Hamburger */
-.hamburger.active span:nth-child(1) {
+/* Hamburger-Burger-Streifen */
+.hamburger .burger {
+    width: 30px;
+    height: 4px;
+    background-color: #fff; /* Weiße Striche für das Hamburger Icon */
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger Menü Zustand (X-Zustand) */
+.hamburger.active {
+    transform: rotate(180deg); /* Optionale Rotation für den Button */
+}
+
+.hamburger.active .burger:nth-child(1) {
     transform: rotate(45deg) translateY(8px);
 }
-.hamburger.active span:nth-child(2) {
+
+.hamburger.active .burger:nth-child(2) {
     opacity: 0;
 }
-.hamburger.active span:nth-child(3) {
+
+.hamburger.active .burger:nth-child(3) {
     transform: rotate(-45deg) translateY(-8px);
 }
 
@@ -117,6 +128,7 @@ body {
     z-index: 1000;
 }
 
+/* Aktive Navigation (Menü sichtbar) */
 .nav-links.active {
     transform: translateX(-100%);
 }
@@ -155,7 +167,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Media Query for Larger Screens (optional) */
+/* Media Query für größere Bildschirme */
 @media (min-width: 768px) {
     .hamburger {
         display: none;
@@ -183,9 +195,9 @@ body {
   
 <div class="menu">
     <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <div class="burger"></div>
+        <div class="burger"></div>
+        <div class="burger"></div>
     </div>
     <nav id="navLinks" class="nav-links">
         <ul>
@@ -197,6 +209,7 @@ body {
         </ul>
     </nav>
 </div>
+
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7CVNSWW2"></script>
