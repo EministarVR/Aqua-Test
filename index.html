@@ -56,6 +56,7 @@
 </head>
 <style>
 /* Global Styles */
+/* Global Styles */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -69,29 +70,21 @@ body {
 }
 
 .desktop-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.desktop-nav ul li {
-    margin: 10px;
-}
-
-.desktop-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 15px;
     text-align: center;
-    transition: background-color 0.3s ease;
+    padding: 20px;
 }
 
-.desktop-nav ul li a:hover {
-    background-color: #444;
+.desktop-nav li {
+    display: inline;
+    padding: 50px;
+}
+
+.desktop-nav a {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(255, 180, 41);
+    font-family: 'VampireWars', sans-serif;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
 }
 
 /* Mobile Navigation */
@@ -193,6 +186,7 @@ body {
 }
 
 
+
 </style>
 <body>
 <div class="bar"></div>
@@ -208,6 +202,7 @@ body {
 
 
   
+<!-- Desktop Navigation -->
 <div class="desktop-nav">
     <ul>
         <li><a href="./index.html">Home</a></li>
@@ -218,6 +213,7 @@ body {
     </ul>
 </div>
 
+<!-- Mobile Navigation with Hamburger Menu -->
 <div class="menu">
     <div class="hamburger" id="hamburger">
         <div class="burger"></div>
@@ -402,6 +398,7 @@ const navLinks = document.getElementById("navLinks");
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
+
 
    </script>
 
