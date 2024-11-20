@@ -55,95 +55,85 @@
   
 </head>
 <style>
- /* Allgemeine Stile */
+ /* Allgemeine Stile *//* Grundlegende Stile */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    background: #f5f5f5; /* Heller Hintergrund */
 }
 
 .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(90deg, #3b82f6, #1e3a8a);
-    padding: 10px 20px;
-    color: white;
-}
-
-.menu .logo {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-.menu ul li {
-    margin: 0 15px;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.menu ul li a:hover {
-    color: #ffcc00;
+    position: relative;
 }
 
 .hamburger {
-    display: none;
     font-size: 24px;
     cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background: #1e1e1e; /* Dunkler Hintergrund */
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Desktop-Stile */
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex;
-    }
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 
-/* Mobile-Stile */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #1e3a8a;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        z-index: 1000;
-        padding: 10px 0;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
+.nav-links.active {
+    display: flex;
 }
 
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    margin: 10px 0;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #1e1e1e; /* Dunkelgraue Schrift */
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #007bff; /* Blau beim Hover */
+}
+
+/* Animationsstile */
+.nav-links {
+    transform: scale(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+
+.nav-links.active {
+    transform: scale(1);
+}
 
 </style>
 <body>
@@ -158,8 +148,9 @@ body {
 
 <div class="barTwo"></div>
 
-<div class="menu">
+
   
+<div class="menu">
     <div class="hamburger" id="hamburger">&#9776;</div>
     <nav id="navLinks" class="nav-links">
         <ul>
@@ -171,7 +162,6 @@ body {
         </ul>
     </nav>
 </div>
-
 
    
 <!-- Google tag (gtag.js) -->
@@ -319,8 +309,6 @@ const navLinks = document.getElementById("navLinks");
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
-
-
 
 
    </script>
