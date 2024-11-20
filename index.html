@@ -69,6 +69,7 @@ body {
     z-index: 1000;
 }
 
+/* Hamburger Icon */
 .hamburger {
     position: absolute;
     top: 20px;
@@ -131,6 +132,13 @@ body {
 /* Aktive Navigation (Menü sichtbar) */
 .nav-links.active {
     transform: translateX(-100%);
+}
+
+/* Logo */
+.nav-links .logo {
+    width: 150px; /* Logo-Größe anpassen */
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease;
 }
 
 /* Links */
@@ -200,6 +208,7 @@ body {
         <div class="burger"></div>
     </div>
     <nav id="navLinks" class="nav-links">
+        <img src="logo.png" alt="Logo" class="logo">
         <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./news.html">News</a></li>
