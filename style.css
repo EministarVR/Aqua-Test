@@ -63,7 +63,7 @@ html, body {
     animation: logoZoom 3.5s infinite; /* Hier wird die Animation hinzugefügt */
 }
 .bannerTop {
-    background-image: url(../img/image_\(3\)-iMMl0SK8x-transformed.png); /* Bildpfad aktualisiert */
+    background-image: url(image_\(3\)-iMMl0SK8x-transformed.png); /* Bildpfad aktualisiert */
     width: 100%;
     height: 380px;
     background-repeat: no-repeat;
