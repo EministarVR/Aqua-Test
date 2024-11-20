@@ -55,17 +55,15 @@
   
 </head>
 <style>
-/* Allgemeine Stile */
-/* Body */
+/* Global */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #121212;
+    background-color: #121212;
     color: #ffffff;
     overflow-x: hidden;
 }
 
-/* Hamburger-Menü */
 .menu {
     position: relative;
     z-index: 1000;
@@ -89,14 +87,14 @@ body {
     display: block;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #ff007f, #00d4ff);
+    background: linear-gradient(45deg, #ff007f, #00d4ff);
     border-radius: 10px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
     box-shadow: 0px 0px 6px rgba(255, 0, 127, 0.6);
 }
 
-/* Animation: Hamburger -> X */
+/* Active Hamburger */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translateY(10px);
 }
@@ -107,22 +105,21 @@ body {
     transform: rotate(-45deg) translateY(-10px);
 }
 
-/* Menü-Hintergrund */
+/* Nav Links */
 .nav-links {
     position: fixed;
     top: 0;
     left: 100%;
     width: 100%;
     height: 100vh;
-    background: radial-gradient(circle, #1e1e1e, #121212);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(18, 18, 18, 0.9));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transform: translateX(0);
     z-index: 1000;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
 }
 
 .nav-links.active {
@@ -138,8 +135,8 @@ body {
 }
 
 .nav-links ul li {
-    margin: 15px 0;
-    animation: fadeIn 0.5s ease forwards;
+    margin: 20px 0;
+    animation: fadeIn 0.6s ease-out forwards;
     opacity: 0;
 }
 
@@ -162,24 +159,24 @@ body {
 .nav-links ul li a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 26px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 700;
     letter-spacing: 1px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    background: linear-gradient(90deg, rgba(255, 0, 127, 0.8), rgba(0, 212, 255, 0.8));
-    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.6);
-    overflow: hidden;
+    padding: 12px 25px;
+    border-radius: 40px;
+    background: linear-gradient(45deg, rgba(255, 0, 127, 0.9), rgba(0, 212, 255, 0.9));
+    box-shadow: 0 4px 30px rgba(255, 0, 127, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    display: inline-block;
 }
 
 .nav-links ul li a:hover {
-    transform: scale(1.2) rotate(2deg);
-    color: #0f0f0f;
-    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.8);
+    transform: scale(1.1) rotate(2deg);
+    background: linear-gradient(45deg, rgba(0, 212, 255, 1), rgba(255, 0, 127, 1));
+    box-shadow: 0 10px 40px rgba(0, 212, 255, 0.6);
 }
 
-/* Animation */
+/* Keyframe for Fade-In */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -233,7 +230,7 @@ body {
         </ul>
     </nav>
 </div>
-  
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7CVNSWW2"></script>
 <script>
