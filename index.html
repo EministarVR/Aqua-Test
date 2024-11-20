@@ -55,102 +55,95 @@
   
 </head>
 <style>
- @media (max-width: 768px) {
-           body {
-    font-family: 'Montserrat', sans-serif;
+ /* Allgemeine Stile */
+body {
     margin: 0;
-    padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background: linear-gradient(90deg, #3b82f6, #1e3a8a);
     padding: 10px 20px;
-    color: #fff;
+    color: white;
+}
+
+.menu .logo {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .menu ul {
     list-style: none;
-    display: flex;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 .menu ul li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .menu ul li a {
-    color: #fff;
     text-decoration: none;
-    transition: color 0.3s;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 .menu ul li a:hover {
     color: #ffcc00;
 }
 
-/* Desktop-Navigation */
-@media (min-width: 769px) {
-    .hamburger {
-        display: none; /* Hamburger für Desktop ausblenden */
-    }
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
 
+/* Desktop-Stile */
+@media (min-width: 768px) {
     .nav-links {
-        display: flex; /* Desktop-Links immer anzeigen */
-        flex-direction: row;
-    }
-
-    .nav-links ul {
-        flex-direction: row; /* Horizontale Links */
-    }
-
-    .nav-links li {
-        margin: 0 15px;
+        display: flex;
     }
 }
 
-/* Mobile-Navigation */
+/* Mobile-Stile */
 @media (max-width: 768px) {
     .hamburger {
-        display: block; /* Hamburger sichtbar machen */
-        font-size: 24px;
-        cursor: pointer;
+        display: block;
     }
 
     .nav-links {
-        display: none; /* Navigation standardmäßig ausblenden */
+        display: none;
         flex-direction: column;
-        background-color: #444;
+        background: #1e3a8a;
         position: absolute;
-        top: 50px;
-        left: 0;
+        top: 60px;
+        right: 0;
         width: 100%;
         z-index: 1000;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
-        display: flex; /* Navigation anzeigen, wenn aktiv */
+        display: flex;
     }
 
     .nav-links ul {
-        flex-direction: column; /* Vertikale Links */
-        margin: 0;
-        padding: 0;
+        flex-direction: column;
+        align-items: center;
     }
 
     .nav-links li {
-        text-align: center;
-        padding: 15px;
-        border-bottom: 1px solid #555;
-    }
-
-    .nav-links li:last-child {
-        border-bottom: none; /* Kein Rand für das letzte Element */
+        margin: 10px 0;
     }
 }
+
 
 </style>
 <body>
@@ -166,8 +159,9 @@
 <div class="barTwo"></div>
 
 <div class="menu">
+    <div class="logo">Logo</div>
     <div class="hamburger" id="hamburger">&#9776;</div>
-    <nav id="navLinks" class="menu">
+    <nav id="navLinks" class="nav-links">
         <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./news.html">News</a></li>
@@ -177,7 +171,6 @@
         </ul>
     </nav>
 </div>
-
 
 
    
@@ -320,11 +313,12 @@
 
 <script>
 
-document.getElementById("hamburger").addEventListener("click", function () {
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("active"); // Navigation ein-/ausblenden
-});
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
 
 
 
