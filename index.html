@@ -56,6 +56,7 @@
 </head>
 <style>
 /* Global */
+/* Global */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -74,43 +75,21 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%; /* Runder Button */
-    background-color: #444; /* Mittelgrau für den Hintergrund des Buttons */
+    width: 40px; /* Breite des Hamburger-Buttons */
+    height: 30px; /* Höhe des Hamburger-Buttons */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     cursor: pointer;
     z-index: 1001;
-    transition: transform 0.3s ease;
 }
 
 /* Hamburger-Burger-Streifen */
 .hamburger .burger {
-    width: 30px;
-    height: 4px;
+    width: 100%;
+    height: 5px; /* Dicke der Striche */
     background-color: #fff; /* Weiße Striche für das Hamburger Icon */
-    margin: 5px 0;
     border-radius: 5px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Hamburger Menü Zustand (X-Zustand) */
-.hamburger.active {
-    transform: rotate(180deg); /* Optionale Rotation für den Button */
-}
-
-.hamburger.active .burger:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
-}
-
-.hamburger.active .burger:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .burger:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px);
 }
 
 /* Nav Links */
@@ -363,10 +342,8 @@ const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
 hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
     navLinks.classList.toggle("active");
 });
-
 
    </script>
 
