@@ -8,8 +8,8 @@
     <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
     <title>Information - AquaBuild</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/information.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="information.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
@@ -64,7 +64,7 @@
 
         <div id="bannerTop" class="bannerTop">
             <div class="logo">
-                <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                <a href="./index.php"><img src="logo.png" alt=""></a>
             </div>
             
                 <a href="./index.php"><p id="title"></p></a>
@@ -85,6 +85,143 @@
                 </ul>
             </nav>
         </div>
+        
+        <div class="mobile-menu-wrapper">
+            <!-- Hamburger Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        
+            <!-- Navigationslinks -->
+            <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+                <img src="logo.png" alt="Logo" class="nav-logo">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="./news.html" class="nav-link">News</a></li>
+                    <li class="nav-item"><a href="./information.html" class="nav-link">Information</a></li>
+                    <li class="nav-item"><a href="./shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="./help.html" class="nav-link">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+/* Menü Container */
+.mobile-menu-wrapper {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Hamburger Icon (nur für Mobilgeräte sichtbar) */
+.mobile-menu-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+    background: none;
+    border: none;
+}
+
+.mobile-menu-btn .menu-line {
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation (Standard versteckt) */
+.mobile-nav {
+    position: fixed;
+    top: -100%; /* Startet außerhalb des sichtbaren Bereichs */
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.3s ease;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+.mobile-nav.active {
+    top: 0; /* Menü wird sichtbar */
+    visibility: visible;
+}
+
+.mobile-nav .nav-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.mobile-nav .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav .nav-item {
+    margin: 10px 0;
+}
+
+.mobile-nav .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 15px;
+    text-align: center;
+    display: block;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-nav .nav-link:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Media Query für größere Bildschirme */
+@media (min-width: 768px) {
+    .mobile-menu-btn {
+        display: none; /* Hamburger-Button verschwindet */
+    }
+
+    .mobile-nav {
+        display: none; /* Mobilmenü deaktiviert */
+    }
+}
+
+
+
+
+</style>
+
+
+
 
         <div class="clear"></div>
 
@@ -190,5 +327,33 @@ src="img/ränge.png" alt="">
                     <p>&copy; 2024 AquaBuild. Alle Rechte vorbehalten.</p>
                 </div>
             </footer>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                    const mobileNav = document.getElementById('mobileNav');
+                
+                    // Toggle Menü bei Klick auf den Hamburger-Button
+                    mobileMenuBtn.addEventListener('click', () => {
+                        const isExpanded = mobileNav.classList.contains('active');
+                        mobileNav.classList.toggle('active');
+                
+                        // Accessibility (Aria-Attribute)
+                        mobileNav.setAttribute('aria-hidden', isExpanded ? 'true' : 'false');
+                        mobileMenuBtn.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+                    });
+                
+                    // Optional: Schließen des Menüs bei Klick außerhalb
+                    document.addEventListener('click', (event) => {
+                        if (!mobileMenuBtn.contains(event.target) && !mobileNav.contains(event.target)) {
+                            mobileNav.classList.remove('active');
+                            mobileNav.setAttribute('aria-hidden', 'true');
+                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                });
+                
+                </script>
+                
+
         </body>              
 </html>
