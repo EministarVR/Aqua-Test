@@ -2,9 +2,14 @@
     font-family: 'Play', sans-serif;
 }
 
+body {
+    background-color: #f8f8f8; /* Sehr helles Grau als Hintergrund */
+    color: #333; /* Dunkler Text für besseren Kontrast */
+}
+
 .article {
     min-height: 1000px;
-    background-color: white;
+    background-color: #ffffff; /* Weißer Hintergrund für Artikel */
     margin-top: 60px;
     margin-left: 50px;
     margin-bottom: 80px;
@@ -26,35 +31,26 @@
     font-size: 16px;
     padding: 0px 20px 10px 20px;
     font-family: 'Open Sans', sans-serif;
-    color: #333; /* Dunklerer Text für besseren Kontrast */
-}
-
-.extra {
-    margin-top: 60px;
-    margin-right: 40px;
-    margin-bottom: 80px;
-    border-radius: 15px;
-    float: right;
-    width: 25%;
+    color: #444; /* Leicht dunklerer Text für eine sanftere Lesbarkeit */
 }
 
 footer {
-    position: fixed; /* Fixieren des Footers am unteren Rand */
+    position: fixed;
     left: 0;
-    bottom: -60px; /* Start mit unsichtbarem Footer */
+    bottom: -60px;
     width: 100%;
     text-align: center;
-    background-color: darkcyan;
-    color: #f1f1f1; /* Hellerer Farbton für besseren Kontrast */
+    background-color: #00796b; /* Helles Teal für den Footer */
+    color: #f1f1f1; /* Heller Text für den Footer */
     font-size: 15px;
     font-family: 'Play', sans-serif;
     padding-top: 15px;
     padding-bottom: 15px;
-    transition: bottom 0.3s ease-in-out; /* Smooth Transition */
+    transition: bottom 0.3s ease-in-out;
 }
 
 footer.show {
-    bottom: 0; /* Footer sichtbar machen */
+    bottom: 0;
 }
 
 footer p {
@@ -65,8 +61,8 @@ footer p {
     margin: 20px;
     width: auto;
     border-radius: 15px;
-    background-color: rgb(243, 243, 243);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(243, 243, 243); /* Sehr helles Grau für den Infoblock */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 }
 
 .infoblockText {
@@ -77,12 +73,12 @@ footer p {
 .infobTitle {
     font-size: 25px;
     font-weight: bold;
-    color: #FF6600; /* Kräftiges Orange für die Überschrift */
+    color: #FF6600; /* Orange für die Infoblock-Überschrift */
 }
 
 .infobDescription {
     font-size: 18px;
-    color: rgb(100, 100, 100);
+    color: rgb(100, 100, 100); /* Neutraler Grauton für die Beschreibung */
 }
 
 .infobContent {
@@ -90,7 +86,21 @@ footer p {
     padding-top: 20px;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
-    color: black; /* Schwarzer Text für aufgeklappte Inhalte */
+}
+
+.infoblockButtonPurple,
+.infoblockButtonRed,
+.infoblockButtonGreen,
+.infoblockButtonYellow {
+    padding: 5px 17px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    margin: 10px;
+    margin-top: -30px;
+    margin-left: 95%;
+    color: white;
 }
 
 .barPurple {
@@ -100,37 +110,11 @@ footer p {
     border-top-right-radius: 15px;
 }
 
-.infoblockButtonPurple {
-    padding: 5px 17px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: purple;
-    border: none;
-    margin: 10px;
-    margin-top: -30px;
-    margin-left: 95%;
-    color: white;
-}
-
 .barRed {
     height: 20px;
     background-color: red;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-}
-
-.infoblockButtonRed {
-    padding: 5px 17px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: red;
-    border: none;
-    margin: 10px;
-    margin-top: -30px;
-    margin-left: 95%;
-    color: white;
 }
 
 .barGreen {
@@ -140,19 +124,6 @@ footer p {
     border-top-right-radius: 15px;
 }
 
-.infoblockButtonGreen {
-    padding: 5px 17px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: green;
-    border: none;
-    margin: 10px;
-    margin-top: -30px;
-    margin-left: 95%;
-    color: white;
-}
-
 .barYellow {
     height: 20px;
     background-color: goldenrod;
@@ -160,21 +131,8 @@ footer p {
     border-top-right-radius: 15px;
 }
 
-.infoblockButtonYellow {
-    padding: 5px 17px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: goldenrod;
-    border: none;
-    margin: 10px;
-    margin-top: -30px;
-    margin-left: 95%;
-    color: white;
-}
-
 .infoblockButtonPurple:hover {
-    background-color: rgb(68, 0, 68);
+    background-color: rgb(102, 0, 102);
 }
 
 .infoblockButtonRed:hover {
@@ -189,28 +147,9 @@ footer p {
     background-color: darkgoldenrod;
 }
 
-.tutorialVideo {
-    padding: 20px;
-}
-
-.video {
-    display: inline-block;
-}
-
-.video iframe {
-    width: 500px;
-}
-
 @media screen and (max-width: 1450px) {
     .extra {
         margin-right: 20px;
-    }
-
-    .infoblockButtonPurple,
-    .infoblockButtonRed,
-    .infoblockButtonGreen,
-    .infoblockButtonYellow {
-        margin-left: 93%;
     }
 
     .tutorialVideo {
@@ -234,7 +173,7 @@ footer p {
     .infoblockButtonRed,
     .infoblockButtonGreen,
     .infoblockButtonYellow {
-        margin-left: 90%;
+        margin-left: 93%;
     }
 
 }
