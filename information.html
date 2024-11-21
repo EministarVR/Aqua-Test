@@ -353,7 +353,17 @@ src="img/ränge.png" alt="">
                 });
                 
                 </script>
-                
+                 <script>
+        // JavaScript zum Einblenden des Footers, wenn man am unteren Rand der Seite ist
+        window.addEventListener('scroll', function () {
+            let footer = document.querySelector('footer');
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                footer.classList.add('show');
+            } else {
+                footer.classList.remove('show');
+            }
+        });
+    </script>
 
         </body>              
 </html>
