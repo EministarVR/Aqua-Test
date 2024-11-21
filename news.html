@@ -62,7 +62,7 @@
 
     <div id="bannerTop" class="bannerTop">
         <div class="logo">
-            <a href="./index.php"><img src="img/logo.png" alt="AquaBuild Logo"></a>
+            <a href="./index.php"><img src="logo.png" alt="AquaBuild Logo"></a>
         </div>
         <a href="./index.php"><p id="title"></p></a>
     </div>
@@ -214,7 +214,7 @@
 
         <div class="news">
             <div class="newsTitle">
-                <div class="newsIcon"><img src="img/gold.png" alt=""></div>
+                <div class="newsIcon"><img src="gold.png" alt=""></div>
                 <h1>Serverstart 30% Rabbataktion!</h1>
                 <div class="clear"></div>
             </div>
@@ -228,13 +228,13 @@
                     Verpasst nicht die Chance, Teil unserer aufregenden Community zu werden und euch diese großartige Aktion zu sichern!
                     👉 Vorbestellen und sparen! 👈</p>
                 <br>
-                <img src="img/serverstart.png" alt="Serverstart Rabattaktion">
+                <img src="serverstart.png" alt="Serverstart Rabattaktion">
             </div>
         </div>
 
         <div class="news">
             <div class="newsTitle">
-                <div class="newsIcon"><img src="img/new.png" alt=""></div>
+                <div class="newsIcon"><img src="new.png" alt=""></div>
                 <h1>🎄 Weihnachtsseason auf AquaBuild! 🎄</h1>
                 <div class="clear"></div>
             </div>
@@ -244,7 +244,7 @@
                 <p>Die festliche Jahreszeit steht vor der Tür! Vom 1. Dezember bis zum 1. Januar 2025 haben wir eine exklusive Weihnachtsaktion für euch vorbereitet.</p>
                 <br>
                 <p>Erwerbt während der Aktionszeit besondere Weihnachts-Cases, die limitierte Edition Items enthalten! Diese festlich gestalteten Items bieten einzigartige Vorteile und sind nur für kurze Zeit verfügbar.</p>
-                <img src="img/weihnachten.png" alt="Weihnachtsaktionen">
+                <img src="weihnachten.png" alt="Weihnachtsaktionen">
                 <p>Haltet Ausschau nach speziellen Codes, die wir während der Aktion veröffentlichen. Mit diesen Codes könnt ihr zusätzliche Belohnungen und Boni einlösen!
                     Was euch erwartet:
                     Festliche Events: Nehmt an aufregenden Weihnachts-Events teil und gewinnt tolle Preise!
@@ -260,7 +260,7 @@
 
         <div class="news">
             <div class="newsTitle">
-                <div class="newsIcon"><img src="img/swords.png" alt=""></div>
+                <div class="newsIcon"><img src="swords.png" alt=""></div>
                 <h1>🏙️ CityBuild kommt bald! 🏙️</h1>
                 <div class="clear"></div>
             </div>
@@ -277,7 +277,7 @@
                     👉 CityBuild – Ein Abenteuer voller Kreativität und Gemeinschaft! 👈
                     Wir können es kaum erwarten, euch auf CityBuild willkommen zu heißen!</p>
                 <br>
-                <img src="img/city-build.png" alt="CityBuild Server">
+                <img src="city-build.png" alt="CityBuild Server">
                 <br>
             </div>
         </div>
@@ -303,6 +303,30 @@
     </footer>
     
     <script src="js/script.js"></script>
+
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+    
+        // Toggle Menü bei Klick auf den Hamburger-Button
+        mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileNav.classList.contains('active');
+            mobileNav.classList.toggle('active');
+    
+            // Accessibility (Aria-Attribute)
+            mobileNav.setAttribute('aria-hidden', isExpanded ? 'true' : 'false');
+            mobileMenuBtn.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+        });
+    
+        // Optional: Schließen des Menüs bei Klick außerhalb
+        document.addEventListener('click', (event) => {
+            if (!mobileMenuBtn.contains(event.target) && !mobileNav.contains(event.target)) {
+                mobileNav.classList.remove('active');
+                mobileNav.setAttribute('aria-hidden', 'true');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    })</script>
 </body>
 
 </html>
