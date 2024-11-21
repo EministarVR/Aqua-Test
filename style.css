@@ -15,11 +15,11 @@ html, body {
 
 @font-face {
     font-family: VampireWars;
-    src: url(Vampire\ Wars.ttf);
+    src: url(../font/Vampire\ Wars.ttf);
 }
 
 .bannerTop {
-    background-image: url(bild-1.png);
+    background-image: url(../img/bild-1.png);
     width: 100%;
     height: 380px;
     background-repeat: no-repeat;
@@ -63,12 +63,37 @@ html, body {
     animation: logoZoom 3.5s infinite; /* Hier wird die Animation hinzugefügt */
 }
 .bannerTop {
-    background-image: url(image_\(3\)-iMMl0SK8x-transformed.png); /* Bildpfad aktualisiert */
+    background-image: url(../img/image_\(3\)-iMMl0SK8x-transformed.png); /* Bildpfad aktualisiert */
     width: 100%;
     height: 380px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+.button-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the containers */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+.custom-container {
+    background-color: #1e1e1e; /* Example background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for content */
+    width: 48%; /* Adjust width as needed */
+    position: relative; /* For positioning of inner elements */
+}
+
+.custom-text {
+    color: #fff; /* Text color */
+}
+
+.custom-play-button {
+    background-color: #ffcc00; /* Button background color */
+    border-radius: 5px; /* Rounded corners for button */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer on hover */
+    display: flex; /* Flexbox for icon and notification */
+    align-items: center; /* Center items vertically */
 }
 
 
@@ -222,6 +247,105 @@ html, body {
     text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
 }
 
+
+/* Mobile Viewport Adjustments */
+@media (max-width: 768px) {
+    .logo img {
+        height: 200px; /* Reduce logo size */
+    }
+
+    .bannerTop p {
+        font-size: 40px; /* Smaller font size for mobile */
+        margin-top: -100px; /* Adjust margin for better placement */
+    }
+
+    .menu li {
+        padding: 10px; /* Reduce padding for menu items */
+    }
+
+    .menu a {
+        font-size: 20px; /* Smaller font size for links */
+    }
+
+    .custom-container {
+        margin: 20px; /* Reduce margin for containers */
+        width: 90%; /* Use more width */
+        height: auto; /* Allow height to be flexible */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+
+    .infoServer {
+        font-size: 16px; /* Adjust font size for server info */
+        margin-left: 0; /* Center align text */
+    }
+
+    .infoImage img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .homeGallery {
+        margin: 20px 0; /* Reduce margins for gallery */
+    }
+
+    .textHGtwo, .textHGone {
+        font-size: 24px; /* Smaller text for mobile */
+        text-align: center; /* Center align text */
+    }
+
+    .butBoxDiscord {
+        margin-top: 10px; /* Adjust margin for buttons */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .comments {
+        display: none; /* Hide comments section on mobile */
+    }
+
+    .butIconDiscord img {
+        width: 50px; /* Smaller icon size */
+    }
+}
+
+/* Navigation Menu Adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        width: 100%; /* Full width for mobile navigation */
+    }
+
+    .nav-links li {
+        padding: 10px; /* Increase padding for touch targets */
+        border-bottom: 1px solid #444; /* Clear separation between items */
+    }
+
+    .hamburger {
+        margin: 10px; /* Add margin for better touch area */
+    }
+}
+
+/* Button Adjustments */
+@media (max-width: 768px) {
+    .custom-play-button {
+        padding: 15px; /* Increase padding for better touch */
+        font-size: 18px; /* Adjust font size for buttons */
+    }
+}
+
+/* Content Layout Adjustments */
+@media (max-width: 768px) {
+    .middleSection {
+        padding: 20px; /* Reduce padding for mobile */
+    }
+
+    .bannermiddle {
+        width: 100%; /* Full width for banner */
+        margin-bottom: 20px; /* Space between sections */
+    }
+}
 .textHGone {
     font-size: 30px;
     color: white;
@@ -234,7 +358,7 @@ html, body {
 
 .hg1 {
     border-right: #2b2b2b solid 2.5px;
-    background-image: url(bild-7.png);
+    background-image: url(../img/bild-7.png);
     float: left;
     height: 250px;
     width: 50%;
@@ -246,7 +370,7 @@ html, body {
 
 .hg2 {
     border-left: #2b2b2b solid 2.5px;
-    background-image: url(bild-4.png);
+    background-image: url(../img/bild-4.png);
     float: right;
     height: 250px;
     width: 50%;
@@ -258,7 +382,7 @@ html, body {
 
 .hg3 {
     border-top: #2b2b2b solid 5px;
-    background-image: url(bild-6.png);
+    background-image: url(../img/bild-6.png);
     height: 250px;
     background-repeat: no-repeat;
     background-position: center;
@@ -314,73 +438,18 @@ li {
     margin-bottom: 40px;
 }
 
-/* Media Queries für mobile Geräte */
-@media only screen and (max-width: 768px) {
-    .middleSection {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-    }
-
-    .bannermiddle {
-        width: 100% !important;
-        height: auto !important;
-        padding-top: 20px !important;
-        float: none !important;
-        margin-bottom: 20px !important;
-    }
-
-    .infoServer {
-        margin-left: 0 !important;
-        padding: 20px !important;
-        font-size: 16px !important;
-    }
-
-    .infoImage {
-        float: none !important;
-        display: block !important;
-        text-align: center !important;
-        margin: 0 auto !important;
-        width: 80% !important;
-    }
-
-    .infoImage img {
-        width: 100% !important;
-        margin-right: 0 !important;
-    }
-
-    /* Flexbox für die .middleSection */
-    .middleSection {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    /* Bild und Text untereinander anordnen */
-    .bannermiddle,
-    .infoServer,
-    .infoImage {
-        width: 100% !important;
-        margin-left: 0 !important;
-    }
-}
-
-
-
-/* Allgemeine Styles */
 .comments {
     background-color: orange;
-    padding: 20px; /* Etwas Padding hinzufügen für mehr Abstand */
 }
 
 .co {
     float: left;
-    width: 33.33%; /* Auf Desktop bleibt es so */
+    width: 33.33%;
     height: 250px;
     text-align: center;
     padding: 50px;
     padding-top: 30px;
     background-color: orange;
-    box-sizing: border-box; /* Verhindert, dass Padding die Gesamtbreite überschreitet */
 }
 
 .co img {
@@ -406,43 +475,6 @@ li {
     font-weight: bold;
     font-size: 17px;
     font-family: 'Play', sans-serif;
-}
-
-/* Mobile-Optimierungen */
-@media (max-width: 768px) {
-    .co {
-        width: 100% !important; /* Auf mobilen Geräten soll jeder Kommentar die volle Breite einnehmen */
-        padding: 20px !important; /* Weniger Padding für bessere Übersichtlichkeit */
-        height: auto !important; /* Höhe an den Inhalt anpassen */
-        margin-bottom: 20px !important; /* Abstand zwischen den Kommentaren */
-    }
-
-    .co img {
-        width: 60px !important; /* Kleinere Bilder auf mobilen Geräten */
-    }
-
-    .cotitle {
-        font-size: 18px !important; /* Etwas kleinere Schrift für kleinere Bildschirme */
-    }
-
-    .cotext {
-        font-size: 15px !important; /* Kleinere Schrift für mobile Geräte */
-    }
-}
-
-/* Zusätzliche Medienabfragen für sehr kleine Geräte */
-@media (max-width: 480px) {
-    .co {
-        padding: 15px !important; /* Noch weniger Padding für sehr kleine Bildschirme */
-    }
-
-    .cotitle {
-        font-size: 16px !important; /* Weiter anpassen */
-    }
-
-    .cotext {
-        font-size: 14px !important; /* Anpassen der Schriftgröße für noch kleinere Geräte */
-    }
 }
 
 .buttonsSocial {
@@ -525,40 +557,18 @@ body {
     animation: slideInLeft 1s ease-in-out;
 }
 
+
 .custom-play-button:hover {
     transform: scale(1.1);
 }
+
+
 
 .button-container {
     display: flex; /* Flexbox to align items horizontally */
     justify-content: space-around; /* Even spacing */
     margin: 20px 0; /* Add some margin for spacing */
 }
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-    .custom-container {
-        flex-direction: column; /* Stack elements vertically on mobile */
-        width: auto; /* Remove fixed width for more flexibility */
-        height: auto; /* Allow content to adjust height based on content */
-        margin-top: 120px; /* Increased margin-top to move the section further down */
-    }
-
-    .button-container {
-        flex-direction: column; /* Stack buttons vertically on mobile */
-        align-items: center; /* Center the buttons */
-    }
-
-    .custom-text h1 {
-        font-size: 24px; /* Slightly smaller text on mobile */
-    }
-
-    .custom-text p {
-        font-size: 14px; /* Slightly smaller text on mobile */
-    }
-}
-
-
 
 @keyframes fadeIn {
     from {

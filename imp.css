@@ -1,0 +1,373 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.impressumContainer {
+    min-height: 1000px;
+    background-color: white;
+    margin: 60px auto 40px auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 60%;
+    border-top: solid 5px rgb(212, 117, 0);
+    border-bottom: solid 5px rgb(212, 117, 0);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.impressumHeader {
+    background-color: rgb(236, 130, 0);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px;
+    color: black;
+}
+
+.impressumHeader h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.impressumContent h2 {
+    color: rgb(212, 117, 0);
+    margin-top: 20px;
+}
+
+.impressumContent p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+a {
+    color: rgb(212, 117, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: VampireWars;
+    src: url(../font/Vampire\ Wars.ttf);
+}
+
+.bannerTop {
+    background-image: url(../img/bild-1.png);
+    width: 100%;
+    height: 380px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+html, body {
+    height: 100%;
+    background-color: #2b2b2b;
+}
+
+.logo {
+    padding-top: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 260px;
+}
+@keyframes logoZoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logo {
+    padding-top: 3vh;
+    display: flex;
+    justify-content: center;
+    animation: logoZoom 3.5s infinite; /* Hier wird die Animation hinzugefügt */
+}
+.bannerTop {
+    background-image: url(../img/image_\(3\)-iMMl0SK8x-transformed.png); /* Bildpfad aktualisiert */
+    width: 100%;
+    height: 380px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bannerTop a {
+    text-decoration: none;
+}
+
+.bannerTop p {
+    font-size: 60px;
+    color: #ff0000;
+    font-family: VampireWars;
+    display: flex;
+    justify-content: center;
+    margin-top: -173px;
+}
+
+.serverIp {
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+    background-color: darkorange;
+    padding: 4px;
+    color: black;
+    font-weight: bolder;
+}
+
+.serverStatus {
+    font-weight: bold;
+
+}
+/* Für das Hamburger-Menü */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(255, 180, 41);
+    text-align: center;
+    margin: 10px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* Standardmäßig ausgeblendet */
+}
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+        background-color: #2b2b2b;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+}
+
+.playersOn {
+    font-weight: bold;
+    color: blue;
+}
+
+.playersMax {
+    font-weight: bold;
+    color: blue;
+}
+
+.serverIpText {
+    font-weight: bold;
+    color: white;
+}
+
+.bar {
+    height: 5px;
+    background-color: rgb(168, 93, 0);
+}
+
+.clear {
+    clear: both;
+}
+
+.menu {
+    margin-top: -90px;
+}
+
+.menu ul {
+    text-align: center;
+    padding: 20px;
+}
+
+.menu li {
+    display: inline;
+    padding: 50px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(255, 180, 41);
+    font-family: VampireWars;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.barTwo {
+    height: 5px;
+    background-color: rgb(168, 93, 0);
+}
+
+.homeGallery {
+    margin: 50px;
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.textHGtwo {
+    font-size: 30px;
+    color: white;
+    text-align: end;
+    padding-right: 40px;
+    padding-top: 190px;
+    font-family: VampireWars;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+.textHGone {
+    font-size: 30px;
+    color: white;
+    text-align: end;
+    padding-right: 40px;
+    padding-top: 190px;
+    font-family: VampireWars;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+.hg1 {
+    border-right: #2b2b2b solid 2.5px;
+    background-image: url(../img/bild-7.png);
+    float: left;
+    height: 250px;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 15px;
+}
+
+.hg2 {
+    border-left: #2b2b2b solid 2.5px;
+    background-image: url(../img/bild-4.png);
+    float: right;
+    height: 250px;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-right-radius: 15px;
+}
+
+.hg3 {
+    border-top: #2b2b2b solid 5px;
+    background-image: url(../img/bild-6.png);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.middleSection {
+    background-color: #2b2b2b;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.bannermiddle {
+    height: 400px;
+    padding-top: 40px;
+    width: 50%;
+    float: left;
+    margin-bottom: 40px;
+}
+
+.infoServer {
+    text-align: center;
+    list-style-position: inside;
+    border-radius: 15px;
+    font-family: 'Play', sans-serif;
+    font-size: 18px;
+    padding: 30px;
+    margin-left: 40vh;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+li {
+    color: white;
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+    list-style: none;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+.infoImage {
+    float: right;
+}
+
+.infoImage img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 270px;
+    margin-right: 40vh;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+
+/* Responsive Anpassungen */
+@media screen and (max-width: 1420px) {
+    .impressumContainer {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .impressumContainer {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .impressumContainer {
+        width: 95%;
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .impressumHeader h1 {
+        font-size: 20px;
+    }
+}
