@@ -314,6 +314,41 @@ li {
     margin-bottom: 40px;
 }
 
+/* Media Queries für mobile Geräte */
+@media only screen and (max-width: 768px) {
+    .middleSection {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .bannermiddle {
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .infoServer {
+        margin-left: 0;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .infoImage {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .infoImage img {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
 /* Allgemeine Styles */
 .comments {
     background-color: orange;
