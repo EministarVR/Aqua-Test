@@ -216,6 +216,36 @@ body {
 }
 
 
+footer {
+    text-align: center;
+    background-color: darkcyan;
+    color: white;
+    font-size: 15px;
+    font-family: 'Play', sans-serif;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.2); /* Für eine leichte Tiefe */
+}
+
+footer .footerContent a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Sanfter Farbwechsel */
+}
+
+footer .footerContent a:hover {
+    color: #00FFFF; /* Helleres Cyan beim Hover */
+}
+
+footer .footerContent p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #f1f1f1;
+}
 
 
 </style>
@@ -316,14 +346,14 @@ Letztlich ist unser Rangsystem nicht nur eine Möglichkeit, den Fortschritt der 
            
                 
 
-            <footer>
-                <div class="footer">
-                    <a href="./impressum.html">Impressum</a>
-                    <a href="./agb.html">AGB</a>
-                    
-                    <p>&copy; 2024 AquaBuild. Alle Rechte vorbehalten.</p>
-                </div>
-            </footer>
+         <footer>
+    <div class="footerContent">
+        <a href="./impressum.html">Impressum</a> | 
+        <a href="./agb.html">AGB</a>
+        <p>&copy; AquaBuild. Alle Rechte vorbehalten.</p>
+    </div>
+</footer>
+
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
