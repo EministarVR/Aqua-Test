@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <title>Erfolg - AquaBuild</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('/img/image_\(3\)-iMMl0SK8x-transformed.png'); /* Placeholder für das Hintergrundbild */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7); /* Abgedunkelter Kasten */
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            transform: scale(0.9);
+            animation: zoomIn 0.5s forwards; /* Zoom-Effekt */
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); }
+            to { transform: scale(1); }
+        }
+
+        .loader {
+            border: 8px solid rgba(255, 255, 255, 0.2);
+            border-top: 8px solid #4285F4;
+            border-radius: 50%;
+            width: 80px; /* Größerer Lade-Kreis */
+            height: 80px; /* Größerer Lade-Kreis */
+            animation: spin 1s linear infinite; /* Ladeanimation */
+            margin: 0 auto 20px; /* Zentriert */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .logo {
+            width: 150px; /* Größeres Logo */
+            margin-bottom: 20px;
+            opacity: 0; /* Start mit 0-Opazität */
+            animation: zoom 1.5s infinite alternate; /* Dauerhafter Zoom-Effekt */
+        }
+
+        @keyframes zoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .back-button {
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease; /* Farbwechsel-Effekt */
+            display: none; /* Standardmäßig ausblenden */
+            text-align: center; /* Zentriert */
+        }
+
+        .back-button:hover {
+            background-color: #357ae8; /* Dunklere Farbe beim Hover */
+        }
+
+        .success-message {
+            font-size: 24px;
+            margin-top: 20px;
+            opacity: 0; /* Start mit 0-Opazität */
+            transition: opacity 0.5s ease; /* Übergang für die Sichtbarkeit */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loader"></div> <!-- Lade-Kreis -->
+        <img src="/img/logo.png" alt="Logo" class="logo"> <!-- Logo -->
+        <div class="success-message">IP erfolgreich kopiert!</div> <!-- Erfolgsmeldung -->
+        <button class="back-button" onclick="window.location.href='index.php'">Zurück</button> <!-- Zurück-Button -->
+    </div>
+
+    <script>
+        // Nach 2 Sekunden den Lade-Kreis ausblenden, das Logo einblenden, die Erfolgsmeldung anzeigen und den Zurück-Button anzeigen
+        setTimeout(function() {
+            document.querySelector('.loader').style.display = 'none';
+            document.querySelector('.logo').style.opacity = 1;
+            document.querySelector('.success-message').style.opacity = 1; // Erfolgsmeldung anzeigen
+            document.querySelector('.back-button').style.display = 'block'; // Zurück-Button anzeigen
+        }, 2000);
+    </script>
+</body>
+</html>

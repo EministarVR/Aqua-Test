@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord - AquaBuild</title>
+    <meta name="description" content="Tritt unserem AquaBuild Discord-Server bei und erlebe die Community!">
+    <meta name="keywords" content="AquaBuild, Discord, Community, Spielen, Deutschland">
+    <!-- Verlinkung zur CSS-Datei -->
+    
+    <!-- Strukturierte Daten für SEO (Schema.org Markup) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Minecraft server ",
+      "name": "AquaBuild",
+      "url": "https://www.aquabuild.de",
+      "logo": "https://www.aquabuild.de/img/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+49 123 456789",
+        "contactType": "Customer Service",
+        "areaServed": "DE",
+        "availableLanguage": ["German"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Musterstraße 1",
+        "addressLocality": "Freiburg",
+        "postalCode": "79098",
+        "addressCountry": "DE"
+      }
+    }
+
+</script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('img/image_\(3\)-iMMl0SK8x-transformed.png'); /* Placeholder for the background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(1.05); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7); /* Dunkler, transparenter Hintergrund */
+            border-radius: 20px; /* Abgerundete Ecken */
+            padding: 40px; /* Innenabstand */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+            animation: slideIn 1s ease-in-out forwards;
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .play-now {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            animation: zoom 3s infinite; /* Dauerhafter Zoom-Effekt */
+        }
+
+        @keyframes zoom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .url-container {
+            position: relative;
+            margin-top: 10px;
+            transition: transform 0.5s ease; /* Rollbewegung */
+            overflow: hidden; /* Überlauf verstecken */
+        }
+
+        .url {
+            font-size: 18px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            transition: transform 0.5s ease; /* Rollbewegung */
+            cursor: pointer; /* Mauszeiger anzeigen */
+        }
+
+        .url:hover {
+            transform: translateY(-30px); /* Nach oben fahren */
+        }
+
+        .copy-ip {
+            display: none; /* Standardmäßig ausblenden */
+            font-size: 18px;
+            margin-top: 5px;
+            color: #f1c40f; /* Gelbe Farbe */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            transition: opacity 0.5s ease; /* Weiche Einblendung */
+            opacity: 0;
+            transform: translateY(10px); /* Startposition */
+        }
+
+        .url-container:hover .copy-ip {
+            display: block; /* IP anzeigen */
+            opacity: 1; /* Einblenden */
+            transform: translateY(0); /* Rückkehr zur Ausgangsposition */
+        }
+
+        .play-button {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 10px; /* Abgerundete Ecken für den Button */
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            padding: 12px 24px; /* Innenabstand für den Button */
+            background-color: #4285F4; /* Hintergrundfarbe */
+            border: none; /* Kein Rahmen */
+            color: white; /* Schriftfarbe */
+            font-size: 20px; /* Schriftgröße */
+            font-weight: bold; /* Fettgedruckte Schrift */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
+        }
+
+        .play-button:hover {
+            transform: translateY(-3px) scale(1.05); /* Leichte Hebung beim Hover */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6); /* Verstärkter Schatten */
+            background-color: #357ae8; /* Dunklere Hintergrundfarbe */
+        }
+
+        .play-button:active {
+            transform: translateY(1px) scale(1); /* Zurück zur Ausgangsposition */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Zurück zum ursprünglichen Schatten */
+        }
+
+        .icon {
+            font-size: 24px; /* Symbolgröße */
+            margin-right: 8px; /* Abstand zwischen Symbol und Text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="play-now">Jetzt unserem Discord Beitreten!</div>
+        <div class="url-container">
+            <div class="url">AquaBuild Disord Server!</div>
+            <div class="copy-ip">Trete bei.</div>
+        </div>
+        <button class="play-button" onclick="startLoading()">
+            <span class="icon">
+                <i class="fas fa-play"></i>
+            </span>
+            Beitreten
+        </button>
+    </div>
+
+    <script>
+        function startLoading() {
+            copyIP(); // IP kopieren
+            window.location.href = "https://dcserver.link/aquabuild"; // Nach dem Kopieren weiterleiten
+        }
+
+        function copyIP() {
+            const ip = "aquabuild.de"; // IP-Adresse, die kopiert werden soll
+            navigator.clipboard.writeText(ip).then(() => {
+                const copyMessage = document.querySelector('.copy-ip');
+                copyMessage.style.color = "#4caf50"; // Erfolgsfarbe
+                copyMessage.style.display = 'block'; // IP anzeigen
+                copyMessage.style.opacity = '1'; // Einblenden
+                copyMessage.style.transform = 'translateY(0)'; // Rückkehr zur Ausgangsposition
+                setTimeout(() => {
+                    copyMessage.style.opacity = '0'; // Nach kurzer Zeit ausblenden
+                }, 2000); // Nach 2 Sekunden ausblenden
+            }).catch(err => {
+                console.error('Fehler beim Kopieren: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
