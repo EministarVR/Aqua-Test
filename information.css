@@ -106,6 +106,9 @@ footer p {
     font-family: 'Open Sans', sans-serif;
     color: #d6d6d6;
 }
+.accordion-content[style*="display: block"] {
+    color: black;
+}
 
 .tutorialVideo {
     padding: 20px;
