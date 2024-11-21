@@ -36,6 +36,24 @@
     width: 25%;
 }
 
+footer {
+    position: fixed; /* Fixieren des Footers am unteren Rand */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: darkcyan;
+    color: white;
+    font-size: 15px;
+    font-family: 'Play', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer p {
+    padding-top: 5px;
+}
+
 .infoblock {
     margin: 20px;
     width: auto;
@@ -175,23 +193,13 @@
 }
 
 @media screen and (max-width: 1450px) {
-
     .extra {
         margin-right: 20px;
     }
 
-    .infoblockButtonPurple {
-        margin-left: 93%;
-    }
-
-    .infoblockButtonRed {
-        margin-left: 93%;
-    }
-
-    .infoblockButtonGreen {
-        margin-left: 93%;
-    }
-
+    .infoblockButtonPurple,
+    .infoblockButtonRed,
+    .infoblockButtonGreen,
     .infoblockButtonYellow {
         margin-left: 93%;
     }
@@ -213,18 +221,9 @@
         display: none;
     }
 
-    .infoblockButtonPurple {
-        margin-left: 90%;
-    }
-
-    .infoblockButtonRed {
-        margin-left: 90%;
-    }
-
-    .infoblockButtonGreen {
-        margin-left: 90%;
-    }
-
+    .infoblockButtonPurple,
+    .infoblockButtonRed,
+    .infoblockButtonGreen,
     .infoblockButtonYellow {
         margin-left: 90%;
     }
@@ -243,25 +242,41 @@
         display: none;
     }
 
-    .infoblockButtonPurple {
-        margin-left: 89%;
-    }
-
-    .infoblockButtonRed {
-        margin-left: 89%;
-    }
-
-    .infoblockButtonGreen {
-        margin-left: 89%;
-    }
-
+    .infoblockButtonPurple,
+    .infoblockButtonRed,
+    .infoblockButtonGreen,
     .infoblockButtonYellow {
         margin-left: 89%;
     }
 
     .video iframe{
-        width: auto;
+        width: 100%;
         height: auto;
     }
 
+    footer {
+        font-size: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .articleTitle {
+        font-size: 24px;
+    }
+
+    .articleDescription {
+        font-size: 14px;
+    }
+
+    .infobTitle {
+        font-size: 20px;
+    }
+
+    .infobDescription {
+        font-size: 16px;
+    }
+
+    .infobContent {
+        font-size: 12px;
+    }
 }
