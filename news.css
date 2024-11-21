@@ -1,15 +1,16 @@
 .newsArticle {
     min-height: 1000px;
-    background-color: #f4f4f4; /* Helleres Grau für besseren Kontrast zum weißen Hintergrund */
-    margin-top: 80px; /* Mehr Abstand zum Header */
-    margin-left: 15%; /* Weniger Rand links und rechts */
+    background-color: #333; /* Dunkler Hintergrund für Artikel */
+    margin-top: 120px; /* Mehr Abstand nach oben, damit das Hamburger-Menü nicht überlappt */
+    margin-left: 15%; 
     margin-right: 15%;
-    margin-bottom: 60px; /* Mehr Abstand zwischen den Artikeln */
+    margin-bottom: 60px; 
     border-radius: 15px;
-    width: 70%; /* Breite anpassen, damit der Artikel zentriert bleibt */
-    border-top: solid 5px rgb(212, 117, 0); /* Orange für Kontrast */
+    width: 70%;
+    border-top: solid 5px rgb(212, 117, 0);
     border-bottom: solid 5px rgb(212, 117, 0);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px; /* Sanfter Schatten für mehr Tiefe */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
+    color: #fff; /* Heller Text für bessere Lesbarkeit */
 }
 
 .news {
@@ -45,7 +46,7 @@ footer p {
 }
 
 .newsTitle {
-    font-size: 18px; /* Größere Schrift für den Titel */
+    font-size: 18px;
     padding: 25px;
     padding-top: 15px;
     padding-bottom: 10px;
@@ -56,13 +57,13 @@ footer p {
 
 .newsTitle h1 {
     margin-top: 8px;
-    color: black; /* Dunkel für besseren Kontrast */
+    color: white; /* Heller Text im Titel */
 }
 
 .newsDescription {
     padding: 20px;
-    font-size: 16px; /* Etwas größere Schrift für den Text */
-    color: #333; /* Dunklerer Text für bessere Lesbarkeit */
+    font-size: 16px;
+    color: #fff; /* Heller Text in der Beschreibung */
 }
 
 .newsDescription img {
