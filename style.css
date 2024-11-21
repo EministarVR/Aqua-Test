@@ -15,11 +15,11 @@ html, body {
 
 @font-face {
     font-family: VampireWars;
-    src: url(Vampire\ Wars.ttf);
+    src: url(../font/Vampire\ Wars.ttf);
 }
 
 .bannerTop {
-    background-image: url(bild-1.png);
+    background-image: url(../img/bild-1.png);
     width: 100%;
     height: 380px;
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@ html, body {
     animation: logoZoom 3.5s infinite; /* Hier wird die Animation hinzugefügt */
 }
 .bannerTop {
-    background-image: url(image_\(3\)-iMMl0SK8x-transformed.png); /* Bildpfad aktualisiert */
+    background-image: url(../img/image_\(3\)-iMMl0SK8x-transformed.png); /* Bildpfad aktualisiert */
     width: 100%;
     height: 380px;
     background-repeat: no-repeat;
@@ -247,105 +247,6 @@ html, body {
     text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
 }
 
-
-/* Mobile Viewport Adjustments */
-@media (max-width: 768px) {
-    .logo img {
-        height: 200px; /* Reduce logo size */
-    }
-
-    .bannerTop p {
-        font-size: 40px; /* Smaller font size for mobile */
-        margin-top: -100px; /* Adjust margin for better placement */
-    }
-
-    .menu li {
-        padding: 10px; /* Reduce padding for menu items */
-    }
-
-    .menu a {
-        font-size: 20px; /* Smaller font size for links */
-    }
-
-    .custom-container {
-        margin: 20px; /* Reduce margin for containers */
-        width: 90%; /* Use more width */
-        height: auto; /* Allow height to be flexible */
-    }
-
-    .button-container {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center buttons */
-    }
-
-    .infoServer {
-        font-size: 16px; /* Adjust font size for server info */
-        margin-left: 0; /* Center align text */
-    }
-
-    .infoImage img {
-        width: 100%; /* Make images responsive */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .homeGallery {
-        margin: 20px 0; /* Reduce margins for gallery */
-    }
-
-    .textHGtwo, .textHGone {
-        font-size: 24px; /* Smaller text for mobile */
-        text-align: center; /* Center align text */
-    }
-
-    .butBoxDiscord {
-        margin-top: 10px; /* Adjust margin for buttons */
-        padding: 15px; /* Reduce padding */
-    }
-
-    .comments {
-        display: none; /* Hide comments section on mobile */
-    }
-
-    .butIconDiscord img {
-        width: 50px; /* Smaller icon size */
-    }
-}
-
-/* Navigation Menu Adjustments */
-@media (max-width: 768px) {
-    .nav-links {
-        width: 100%; /* Full width for mobile navigation */
-    }
-
-    .nav-links li {
-        padding: 10px; /* Increase padding for touch targets */
-        border-bottom: 1px solid #444; /* Clear separation between items */
-    }
-
-    .hamburger {
-        margin: 10px; /* Add margin for better touch area */
-    }
-}
-
-/* Button Adjustments */
-@media (max-width: 768px) {
-    .custom-play-button {
-        padding: 15px; /* Increase padding for better touch */
-        font-size: 18px; /* Adjust font size for buttons */
-    }
-}
-
-/* Content Layout Adjustments */
-@media (max-width: 768px) {
-    .middleSection {
-        padding: 20px; /* Reduce padding for mobile */
-    }
-
-    .bannermiddle {
-        width: 100%; /* Full width for banner */
-        margin-bottom: 20px; /* Space between sections */
-    }
-}
 .textHGone {
     font-size: 30px;
     color: white;
@@ -358,7 +259,7 @@ html, body {
 
 .hg1 {
     border-right: #2b2b2b solid 2.5px;
-    background-image: url(bild-7.png);
+    background-image: url(../img/bild-7.png);
     float: left;
     height: 250px;
     width: 50%;
@@ -370,7 +271,7 @@ html, body {
 
 .hg2 {
     border-left: #2b2b2b solid 2.5px;
-    background-image: url(bild-4.png);
+    background-image: url(../img/bild-4.png);
     float: right;
     height: 250px;
     width: 50%;
@@ -382,7 +283,7 @@ html, body {
 
 .hg3 {
     border-top: #2b2b2b solid 5px;
-    background-image: url(bild-6.png);
+    background-image: url(../img/bild-6.png);
     height: 250px;
     background-repeat: no-repeat;
     background-position: center;
@@ -762,120 +663,6 @@ footer p {
 
     .infoImage img {
         margin-right: 0vh;
-    }
-}
-.menu {
-    position: relative;
-    z-index: 1000;
-}
-
-/* Hamburger Icon */
-.hamburger {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 40px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.hamburger .burger {
-    width: 100%;
-    height: 5px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-/* Mobile Nav Links */
-.nav-links {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #2a2a2a;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: top 0.3s ease;
-}
-
-.nav-links.active {
-    top: 0;
-}
-
-.nav-links .logo {
-    width: 150px;
-    margin-bottom: 20px;
-}
-
-.nav-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-.nav-links ul li {
-    margin: 10px 0;
-}
-
-.nav-links ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    padding: 15px;
-    text-align: center;
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    background-color: #444;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-links ul li a:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-
-/* Media Queries */
-@font-face {
-    font-family: 'VampireWars';
-    src: url('VampireWars.ttf') format('truetype');
-}
-
-@media screen and (min-width: 1024px) {
-    .menu {
-        display: none; /* Versteckt das Hamburger-Menü auf großen Bildschirmen */
-    }
-
-    .desktop-nav {
-        display: block; /* Zeigt die Desktop-Navigation */
-    }
-
-    .desktop-nav a {
-        font-family: 'VampireWars', sans-serif;
-        text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
-        font-size: 30px;
-        color: rgb(255, 180, 41);
-        text-decoration: none;
-    }
-}
-
-@media (max-width: 767px) {
-    .desktop-nav {
-        display: none; /* Versteckt die Desktop-Navigation auf mobilen Geräten */
-    }
-
-    .menu {
-        display: block; /* Zeigt das Hamburger-Menü auf mobilen Geräten */
     }
 }
 
