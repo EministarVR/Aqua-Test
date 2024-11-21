@@ -53,11 +53,12 @@ footer p {
     background-color: rgb(236, 130, 0);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    color: black !important; /* Textfarbe schwarz im Titel für Desktop und Mobile */
 }
 
 .newsTitle h1 {
     margin-top: 8px;
-    color: white; /* Heller Text im Titel */
+    color: black !important; /* Textfarbe schwarz für Desktop und Mobile */
 }
 
 .newsDescription {
