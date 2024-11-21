@@ -19,12 +19,14 @@
     font-weight: bold;
     font-size: 30px;
     padding: 20px;
+    color: #FF6600; /* Kräftiges Orange für die Überschrift */
 }
 
 .articleDescription {
     font-size: 16px;
     padding: 0px 20px 10px 20px;
     font-family: 'Open Sans', sans-serif;
+    color: #333; /* Dunklerer Text für besseren Kontrast */
 }
 
 .extra {
@@ -39,15 +41,20 @@
 footer {
     position: fixed; /* Fixieren des Footers am unteren Rand */
     left: 0;
-    bottom: 0;
+    bottom: -60px; /* Start mit unsichtbarem Footer */
     width: 100%;
     text-align: center;
     background-color: darkcyan;
-    color: white;
+    color: #f1f1f1; /* Hellerer Farbton für besseren Kontrast */
     font-size: 15px;
     font-family: 'Play', sans-serif;
     padding-top: 15px;
     padding-bottom: 15px;
+    transition: bottom 0.3s ease-in-out; /* Smooth Transition */
+}
+
+footer.show {
+    bottom: 0; /* Footer sichtbar machen */
 }
 
 footer p {
@@ -70,6 +77,7 @@ footer p {
 .infobTitle {
     font-size: 25px;
     font-weight: bold;
+    color: #FF6600; /* Kräftiges Orange für die Überschrift */
 }
 
 .infobDescription {
