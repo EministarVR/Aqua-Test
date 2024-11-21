@@ -449,7 +449,7 @@ body {
         flex-direction: column; /* Stack elements vertically on mobile */
         width: auto; /* Remove fixed width for more flexibility */
         height: auto; /* Allow content to adjust height based on content */
-        margin-top: 80px; /* Added margin-top to move the section further down */
+        margin-top: 120px; /* Increased margin-top to move the section further down */
     }
 
     .button-container {
@@ -465,6 +465,7 @@ body {
         font-size: 14px; /* Slightly smaller text on mobile */
     }
 }
+
 
 
 @keyframes fadeIn {
