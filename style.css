@@ -359,37 +359,37 @@ li {
 /* Mobile-Optimierungen */
 @media (max-width: 768px) {
     .co {
-        width: 100%; /* Auf mobilen Geräten soll jeder Kommentar die volle Breite einnehmen */
-        padding: 20px; /* Weniger Padding für bessere Übersichtlichkeit */
-        height: auto; /* Höhe an den Inhalt anpassen */
-        margin-bottom: 20px; /* Abstand zwischen den Kommentaren */
+        width: 100% !important; /* Auf mobilen Geräten soll jeder Kommentar die volle Breite einnehmen */
+        padding: 20px !important; /* Weniger Padding für bessere Übersichtlichkeit */
+        height: auto !important; /* Höhe an den Inhalt anpassen */
+        margin-bottom: 20px !important; /* Abstand zwischen den Kommentaren */
     }
 
     .co img {
-        width: 60px; /* Kleinere Bilder auf mobilen Geräten */
+        width: 60px !important; /* Kleinere Bilder auf mobilen Geräten */
     }
 
     .cotitle {
-        font-size: 18px; /* Etwas kleinere Schrift für kleinere Bildschirme */
+        font-size: 18px !important; /* Etwas kleinere Schrift für kleinere Bildschirme */
     }
 
     .cotext {
-        font-size: 15px; /* Kleinere Schrift für mobile Geräte */
+        font-size: 15px !important; /* Kleinere Schrift für mobile Geräte */
     }
 }
 
 /* Zusätzliche Medienabfragen für sehr kleine Geräte */
 @media (max-width: 480px) {
     .co {
-        padding: 15px; /* Noch weniger Padding für sehr kleine Bildschirme */
+        padding: 15px !important; /* Noch weniger Padding für sehr kleine Bildschirme */
     }
 
     .cotitle {
-        font-size: 16px; /* Weiter anpassen */
+        font-size: 16px !important; /* Weiter anpassen */
     }
 
     .cotext {
-        font-size: 14px; /* Anpassen der Schriftgröße für noch kleinere Geräte */
+        font-size: 14px !important; /* Anpassen der Schriftgröße für noch kleinere Geräte */
     }
 }
 
