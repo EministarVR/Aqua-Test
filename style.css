@@ -314,18 +314,21 @@ li {
     margin-bottom: 40px;
 }
 
+/* Allgemeine Styles */
 .comments {
     background-color: orange;
+    padding: 20px; /* Etwas Padding hinzufügen für mehr Abstand */
 }
 
 .co {
     float: left;
-    width: 33.33%;
+    width: 33.33%; /* Auf Desktop bleibt es so */
     height: 250px;
     text-align: center;
     padding: 50px;
     padding-top: 30px;
     background-color: orange;
+    box-sizing: border-box; /* Verhindert, dass Padding die Gesamtbreite überschreitet */
 }
 
 .co img {
@@ -351,6 +354,43 @@ li {
     font-weight: bold;
     font-size: 17px;
     font-family: 'Play', sans-serif;
+}
+
+/* Mobile-Optimierungen */
+@media (max-width: 768px) {
+    .co {
+        width: 100%; /* Auf mobilen Geräten soll jeder Kommentar die volle Breite einnehmen */
+        padding: 20px; /* Weniger Padding für bessere Übersichtlichkeit */
+        height: auto; /* Höhe an den Inhalt anpassen */
+        margin-bottom: 20px; /* Abstand zwischen den Kommentaren */
+    }
+
+    .co img {
+        width: 60px; /* Kleinere Bilder auf mobilen Geräten */
+    }
+
+    .cotitle {
+        font-size: 18px; /* Etwas kleinere Schrift für kleinere Bildschirme */
+    }
+
+    .cotext {
+        font-size: 15px; /* Kleinere Schrift für mobile Geräte */
+    }
+}
+
+/* Zusätzliche Medienabfragen für sehr kleine Geräte */
+@media (max-width: 480px) {
+    .co {
+        padding: 15px; /* Noch weniger Padding für sehr kleine Bildschirme */
+    }
+
+    .cotitle {
+        font-size: 16px; /* Weiter anpassen */
+    }
+
+    .cotext {
+        font-size: 14px; /* Anpassen der Schriftgröße für noch kleinere Geräte */
+    }
 }
 
 .buttonsSocial {
