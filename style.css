@@ -337,6 +337,7 @@ li {
 
     .infoImage {
         float: none !important;
+        display: block !important;
         text-align: center !important;
         margin: 0 auto !important;
         width: 80% !important;
@@ -345,6 +346,21 @@ li {
     .infoImage img {
         width: 100% !important;
         margin-right: 0 !important;
+    }
+
+    /* Flexbox für die .middleSection */
+    .middleSection {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Bild und Text untereinander anordnen */
+    .bannermiddle,
+    .infoServer,
+    .infoImage {
+        width: 100% !important;
+        margin-left: 0 !important;
     }
 }
 
