@@ -2,31 +2,40 @@
     font-family: 'Play', sans-serif;
 }
 
+body {
+    background-color: #1a1a1a; /* Dunklerer Hintergrund */
+    color: #e0e0e0; /* Hellerer Standard-Text für bessere Lesbarkeit */
+    margin: 0;
+    padding: 0;
+}
+
 .article {
     min-height: 1000px;
-    background-color: white;
+    background-color: #2b2b2b; /* Dunkles Grau für Artikel */
     margin-top: 60px;
     margin-left: 50px;
     margin-bottom: 80px;
     border-radius: 15px;
     float: left;
     width: 93%;
-    border-top: solid 5px rgb(212, 117, 0);
-    border-bottom: solid 5px rgb(212, 117, 0);
+    border-top: solid 5px #ff9800; /* Orange für visuelle Akzente */
+    border-bottom: solid 5px #ff9800;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Tieferer Schatten */
 }
 
 .articleTitle {
     font-weight: bold;
     font-size: 30px;
     padding: 20px;
-    color: #FF6600; /* Kräftiges Orange für die Überschrift */
+    color: #ffb74d; /* Helles Orange für bessere Lesbarkeit */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Leichte Hervorhebung */
 }
 
 .articleDescription {
     font-size: 16px;
     padding: 0px 20px 10px 20px;
     font-family: 'Open Sans', sans-serif;
-    color: #333; /* Dunklerer Text für besseren Kontrast */
+    color: #cccccc; /* Hellgrauer Text */
 }
 
 .extra {
@@ -36,25 +45,27 @@
     border-radius: 15px;
     float: right;
     width: 25%;
+    background-color: #2b2b2b; /* Einheitliche Hintergrundfarbe */
+    color: #e0e0e0;
 }
 
 footer {
-    position: fixed; /* Fixieren des Footers am unteren Rand */
+    position: fixed;
     left: 0;
-    bottom: -60px; /* Start mit unsichtbarem Footer */
+    bottom: -60px; /* Start unsichtbar */
     width: 100%;
     text-align: center;
-    background-color: darkcyan;
-    color: #f1f1f1; /* Hellerer Farbton für besseren Kontrast */
+    background-color: #121212; /* Sehr dunkles Grau */
+    color: #ffffff; /* Weiß für maximalen Kontrast */
     font-size: 15px;
     font-family: 'Play', sans-serif;
     padding-top: 15px;
     padding-bottom: 15px;
-    transition: bottom 0.3s ease-in-out; /* Smooth Transition */
+    transition: bottom 0.3s ease-in-out;
 }
 
 footer.show {
-    bottom: 0; /* Footer sichtbar machen */
+    bottom: 0;
 }
 
 footer p {
@@ -65,24 +76,27 @@ footer p {
     margin: 20px;
     width: auto;
     border-radius: 15px;
-    background-color: rgb(243, 243, 243);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #333333; /* Einheitlich dunkler Block */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Tiefer Schatten */
+    color: #e0e0e0;
 }
 
 .infoblockText {
     padding: 20px;
     padding-bottom: 0px;
+    color: #cccccc; /* Hellgrau */
 }
 
 .infobTitle {
     font-size: 25px;
     font-weight: bold;
-    color: #FF6600; /* Kräftiges Orange für die Überschrift */
+    color: #ffa726; /* Heller Orange-Ton */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .infobDescription {
     font-size: 18px;
-    color: rgb(100, 100, 100);
+    color: #bbbbbb; /* Hellgrauer Text */
 }
 
 .infobContent {
@@ -90,106 +104,13 @@ footer p {
     padding-top: 20px;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
-}
-
-.barPurple {
-    height: 20px;
-    background-color: purple;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.infoblockButtonPurple {
-    padding: 5px 17px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: purple;
-    border: none;
-    margin: 10px;
-    margin-top: -30px;
-    margin-left: 95%;
-    color: white;
-}
-
-.barRed {
-    height: 20px;
-    background-color: red;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.infoblockButtonRed {
-    padding: 5px 17px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: red;
-    border: none;
-    margin: 10px;
-    margin-top: -30px;
-    margin-left: 95%;
-    color: white;
-}
-
-.barGreen {
-    height: 20px;
-    background-color: green;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.infoblockButtonGreen {
-    padding: 5px 17px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: green;
-    border: none;
-    margin: 10px;
-    margin-top: -30px;
-    margin-left: 95%;
-    color: white;
-}
-
-.barYellow {
-    height: 20px;
-    background-color: goldenrod;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.infoblockButtonYellow {
-    padding: 5px 17px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: goldenrod;
-    border: none;
-    margin: 10px;
-    margin-top: -30px;
-    margin-left: 95%;
-    color: white;
-}
-
-.infoblockButtonPurple:hover {
-    background-color: rgb(68, 0, 68);
-}
-
-.infoblockButtonRed:hover {
-    background-color: darkred;
-}
-
-.infoblockButtonGreen:hover {
-    background-color: darkgreen;
-}
-
-.infoblockButtonYellow:hover {
-    background-color: darkgoldenrod;
+    color: #d6d6d6;
 }
 
 .tutorialVideo {
     padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 15px;
 }
 
 .video {
@@ -198,18 +119,13 @@ footer p {
 
 .video iframe {
     width: 500px;
+    border: 2px solid #444444; /* Rahmen für bessere Abgrenzung */
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 1450px) {
     .extra {
         margin-right: 20px;
-    }
-
-    .infoblockButtonPurple,
-    .infoblockButtonRed,
-    .infoblockButtonGreen,
-    .infoblockButtonYellow {
-        margin-left: 93%;
     }
 
     .tutorialVideo {
@@ -228,14 +144,6 @@ footer p {
     .extra {
         display: none;
     }
-
-    .infoblockButtonPurple,
-    .infoblockButtonRed,
-    .infoblockButtonGreen,
-    .infoblockButtonYellow {
-        margin-left: 90%;
-    }
-
 }
 
 @media screen and (max-width: 620px) {
@@ -244,20 +152,14 @@ footer p {
         margin-left: 0%;
         float: none;
         width: 100%;
+        margin-top: 100px; /* Mehr Abstand zwischen Header und Artikeln */
     }
 
     .extra {
         display: none;
     }
 
-    .infoblockButtonPurple,
-    .infoblockButtonRed,
-    .infoblockButtonGreen,
-    .infoblockButtonYellow {
-        margin-left: 89%;
-    }
-
-    .video iframe{
+    .video iframe {
         width: 100%;
         height: auto;
     }
