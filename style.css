@@ -15,11 +15,11 @@ html, body {
 
 @font-face {
     font-family: VampireWars;
-    src: url(../font/Vampire\ Wars.ttf);
+    src: url(Vampire\ Wars.ttf);
 }
 
 .bannerTop {
-    background-image: url(../img/bild-1.png);
+    background-image: url(bild-1.png);
     width: 100%;
     height: 380px;
     background-repeat: no-repeat;
@@ -63,37 +63,12 @@ html, body {
     animation: logoZoom 3.5s infinite; /* Hier wird die Animation hinzugefügt */
 }
 .bannerTop {
-    background-image: url(../img/image_\(3\)-iMMl0SK8x-transformed.png); /* Bildpfad aktualisiert */
+    background-image: url(image_\(3\)-iMMl0SK8x-transformed.png); /* Bildpfad aktualisiert */
     width: 100%;
     height: 380px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-.button-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between the containers */
-    margin: 20px 0; /* Add some margin for spacing */
-}
-.custom-container {
-    background-color: #1e1e1e; /* Example background color */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding for content */
-    width: 48%; /* Adjust width as needed */
-    position: relative; /* For positioning of inner elements */
-}
-
-.custom-text {
-    color: #fff; /* Text color */
-}
-
-.custom-play-button {
-    background-color: #ffcc00; /* Button background color */
-    border-radius: 5px; /* Rounded corners for button */
-    padding: 10px; /* Padding for button */
-    cursor: pointer; /* Pointer on hover */
-    display: flex; /* Flexbox for icon and notification */
-    align-items: center; /* Center items vertically */
 }
 
 
@@ -259,7 +234,7 @@ html, body {
 
 .hg1 {
     border-right: #2b2b2b solid 2.5px;
-    background-image: url(../img/bild-7.png);
+    background-image: url(bild-7.png);
     float: left;
     height: 250px;
     width: 50%;
@@ -271,7 +246,7 @@ html, body {
 
 .hg2 {
     border-left: #2b2b2b solid 2.5px;
-    background-image: url(../img/bild-4.png);
+    background-image: url(bild-4.png);
     float: right;
     height: 250px;
     width: 50%;
@@ -283,7 +258,7 @@ html, body {
 
 .hg3 {
     border-top: #2b2b2b solid 5px;
-    background-image: url(../img/bild-6.png);
+    background-image: url(bild-6.png);
     height: 250px;
     background-repeat: no-repeat;
     background-position: center;
@@ -458,18 +433,38 @@ body {
     animation: slideInLeft 1s ease-in-out;
 }
 
-
 .custom-play-button:hover {
     transform: scale(1.1);
 }
-
-
 
 .button-container {
     display: flex; /* Flexbox to align items horizontally */
     justify-content: space-around; /* Even spacing */
     margin: 20px 0; /* Add some margin for spacing */
 }
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .custom-container {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        width: auto; /* Remove fixed width for more flexibility */
+        height: auto; /* Allow content to adjust height based on content */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        align-items: center; /* Center the buttons */
+    }
+
+    .custom-text h1 {
+        font-size: 24px; /* Slightly smaller text on mobile */
+    }
+
+    .custom-text p {
+        font-size: 14px; /* Slightly smaller text on mobile */
+    }
+}
+
 
 @keyframes fadeIn {
     from {
