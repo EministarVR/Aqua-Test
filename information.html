@@ -215,29 +215,18 @@ body {
     }
 }
 
-/* Standard-Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Damit der Body die volle Höhe einnimmt */
-}
 
-.content {
-    flex-grow: 1; /* Hält den Inhalt flexibel */
-    padding: 20px;
-}
-
-/* Footer */
 footer {
+    text-align: center;
     background-color: darkcyan;
     color: white;
-    text-align: center;
-    padding: 15px 0;
     font-size: 15px;
     font-family: 'Play', sans-serif;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.2); /* Für eine leichte Tiefe */
 }
 
 footer .footerContent a {
@@ -245,11 +234,17 @@ footer .footerContent a {
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Sanfter Farbwechsel */
 }
 
 footer .footerContent a:hover {
-    color: #00FFFF;
+    color: #00FFFF; /* Helleres Cyan beim Hover */
+}
+
+footer .footerContent p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #f1f1f1;
 }
 
 
