@@ -2,14 +2,12 @@
     font-family: 'Play', sans-serif;
 }
 
-body {
-    margin-top: 0px; /* Abstand zwischen Header und Body entfernt */
-}
+
 
 .newsArticle {
     min-height: 500px;
     background-color: white;
-    margin-top: 60px; /* Abstand zwischen dem Header und der News-Sektion, der jetzt bleibt */
+    margin-top: 100px; /* Abstand zwischen dem Header und der News-Sektion nur auf mobilen Geräten */
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 40px;
@@ -92,7 +90,7 @@ body {
         margin-left: auto;
         margin-right: auto;
         width: 95%;
-        margin-top: 60px; /* Der Abstand zu Header bleibt bei 60px */
+        margin-top: 120px; /* Größerer Abstand auf kleinen Geräten */
     }
 
     /* Anpassungen für den Text in der Artikelbeschreibung */
@@ -109,7 +107,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .newsArticle {
-        margin-top: 60px; /* Der Abstand zu Header bleibt auch hier bei 60px */
+        margin-top: 140px; /* Noch mehr Abstand auf sehr kleinen Geräten */
     }
 
     .articleTitle {
