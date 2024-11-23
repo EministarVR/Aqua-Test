@@ -5,7 +5,7 @@
 .newsArticle {
     min-height: 500px;
     background-color: white;
-    margin-top: 80px; /* Mehr Abstand zum Header */
+    margin-top: 80px; /* Mehr Abstand zwischen Header und Artikel */
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 40px;
@@ -28,6 +28,7 @@
     padding: 0px 20px 10px 20px;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+    color: black; /* Textfarbe der Beschreibung ebenfalls schwarz */
 }
 
 .team {
