@@ -3,7 +3,7 @@
 }
 
 body {
-    margin-top: 80px; /* Mehr Abstand zwischen Header und Body */
+    margin-top: 80px; /* Standardmäßiger Abstand zwischen Header und Body */
 }
 
 .newsArticle {
@@ -88,6 +88,10 @@ body {
 
 /* Optimierungen für kleinere Bildschirme (Tablets und Smartphones) */
 @media screen and (max-width: 990px) {
+    body {
+        margin-top: 120px; /* Größerer Abstand auf kleinen Geräten */
+    }
+
     .newsArticle {
         margin-left: auto;
         margin-right: auto;
@@ -107,6 +111,10 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    body {
+        margin-top: 140px; /* Noch mehr Abstand auf sehr kleinen Geräten */
+    }
+
     .articleTitle {
         font-size: 32px; /* Kleinere Schriftgröße für den Titel auf kleinen Geräten */
     }
