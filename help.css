@@ -3,13 +3,13 @@
 }
 
 body {
-    margin-top: 80px; /* Standardmäßiger Abstand zwischen Header und Body bleibt unverändert */
+    margin-top: 0px; /* Abstand zwischen Header und Body entfernt */
 }
 
 .newsArticle {
     min-height: 500px;
     background-color: white;
-    margin-top: 0px; /* Kein Abstand mehr zwischen Header und News-Sektion */
+    margin-top: 60px; /* Abstand zwischen dem Header und der News-Sektion, der jetzt bleibt */
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 40px;
@@ -92,7 +92,7 @@ body {
         margin-left: auto;
         margin-right: auto;
         width: 95%;
-        margin-top: 0px; /* Kein zusätzlicher Abstand mehr */
+        margin-top: 60px; /* Der Abstand zu Header bleibt bei 60px */
     }
 
     /* Anpassungen für den Text in der Artikelbeschreibung */
@@ -109,7 +109,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .newsArticle {
-        margin-top: 0px; /* Kein Abstand auf sehr kleinen Geräten */
+        margin-top: 60px; /* Der Abstand zu Header bleibt auch hier bei 60px */
     }
 
     .articleTitle {
