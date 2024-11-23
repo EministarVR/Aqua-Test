@@ -34,7 +34,6 @@ body {
     color: #444; /* Leicht dunklerer Text für eine sanftere Lesbarkeit */
 }
 
-
 .infoblock {
     margin: 20px;
     width: auto;
@@ -60,10 +59,13 @@ body {
 }
 
 .infobContent {
-    display: none;
-    padding-top: 20px;
+    max-height: 0; /* Startet versteckt */
+    overflow: hidden; /* Überschüssiger Inhalt wird ausgeblendet */
+    transition: max-height 0.5s ease, padding 0.5s ease; /* Smooth Animation */
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
+    color: #333 !important; /* Dunkler Text */
+    padding: 0 20px; /* Kein Padding, wenn versteckt */
 }
 
 .infoblockButtonPurple,
@@ -136,7 +138,6 @@ body {
 }
 
 @media screen and (max-width: 975px) {
-
     .article {
         margin-left: 5%;
         float: none;
@@ -153,11 +154,9 @@ body {
     .infoblockButtonYellow {
         margin-left: 93%;
     }
-
 }
 
 @media screen and (max-width: 620px) {
-
     .article {
         margin-left: 0%;
         float: none;
@@ -180,7 +179,6 @@ body {
         height: auto;
     }
 
-   
     .articleTitle {
         font-size: 24px;
     }
