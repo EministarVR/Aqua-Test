@@ -1,3 +1,4 @@
+/* Globale Stile */
 * {
     font-family: 'Play', sans-serif;
 }
@@ -5,8 +6,11 @@
 body {
     background-color: #f8f8f8; /* Sehr helles Grau als Hintergrund */
     color: #333; /* Dunkler Text für besseren Kontrast */
+    margin: 0;
+    padding: 0;
 }
 
+/* Artikel Bereich */
 .article {
     min-height: 1000px;
     background-color: #ffffff; /* Weißer Hintergrund für Artikel */
@@ -14,12 +18,12 @@ body {
     margin-left: 50px;
     margin-bottom: 80px;
     border-radius: 15px;
-    float: left;
     width: 93%;
     border-top: solid 5px rgb(212, 117, 0);
     border-bottom: solid 5px rgb(212, 117, 0);
 }
 
+/* Artikel Titel */
 .articleTitle {
     font-weight: bold;
     font-size: 30px;
@@ -27,6 +31,7 @@ body {
     color: #FF6600; /* Kräftiges Orange für die Überschrift */
 }
 
+/* Artikel Beschreibung */
 .articleDescription {
     font-size: 16px;
     padding: 0px 20px 10px 20px;
@@ -34,40 +39,53 @@ body {
     color: #444; /* Leicht dunklerer Text für eine sanftere Lesbarkeit */
 }
 
+/* Infoblock Styling */
 .infoblock {
     margin: 20px;
     width: auto;
     border-radius: 15px;
     background-color: rgb(243, 243, 243); /* Sehr helles Grau für den Infoblock */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Übergang für Hintergrundfarbe */
 }
 
+/* Infoblock Text Styling */
 .infoblockText {
     padding: 20px;
     padding-bottom: 0px;
 }
 
+/* Infoblock Titel */
 .infobTitle {
     font-size: 25px;
     font-weight: bold;
     color: #FF6600; /* Orange für die Infoblock-Überschrift */
 }
 
+/* Infoblock Beschreibung */
 .infobDescription {
     font-size: 18px;
     color: rgb(100, 100, 100); /* Neutraler Grauton für die Beschreibung */
 }
 
+/* Ausgeklappter Infoblock Inhalt */
 .infobContent {
     max-height: 0; /* Startet versteckt */
     overflow: hidden; /* Überschüssiger Inhalt wird ausgeblendet */
-    transition: max-height 0.5s ease, padding 0.5s ease; /* Smooth Animation */
+    transition: max-height 0.5s ease, padding 0.5s ease, color 0.3s ease; /* Smooth Animation */
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     color: #333 !important; /* Dunkler Text */
     padding: 0 20px; /* Kein Padding, wenn versteckt */
 }
 
+/* Schriftfarbe wird nur geändert, wenn der Text sichtbar ist */
+.infobblock.open .infobContent {
+    color: #000 !important; /* Setzt die Schriftfarbe auf schwarz, wenn der Block aufgeklappt ist */
+}
+
+/* Hover-Effekte für die Buttons */
 .infoblockButtonPurple,
 .infoblockButtonRed,
 .infoblockButtonGreen,
@@ -81,34 +99,8 @@ body {
     margin-top: -30px;
     margin-left: 95%;
     color: white;
-}
-
-.barPurple {
-    height: 20px;
-    background-color: purple;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.barRed {
-    height: 20px;
-    background-color: red;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.barGreen {
-    height: 20px;
-    background-color: green;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.barYellow {
-    height: 20px;
-    background-color: goldenrod;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    background-color: #6a0dad;
+    transition: background-color 0.3s ease; /* Weicher Hover-Effekt */
 }
 
 .infoblockButtonPurple:hover {
@@ -127,6 +119,7 @@ body {
     background-color: darkgoldenrod;
 }
 
+/* Media Queries für mobile Geräte */
 @media screen and (max-width: 1450px) {
     .extra {
         margin-right: 20px;
@@ -138,10 +131,11 @@ body {
 }
 
 @media screen and (max-width: 975px) {
+
     .article {
         margin-left: 5%;
-        float: none;
         width: 90%;
+        margin-right: 5%;
     }
 
     .extra {
@@ -154,13 +148,15 @@ body {
     .infoblockButtonYellow {
         margin-left: 93%;
     }
+
 }
 
 @media screen and (max-width: 620px) {
+
     .article {
         margin-left: 0%;
-        float: none;
         width: 100%;
+        padding: 10px;
     }
 
     .extra {
@@ -179,6 +175,7 @@ body {
         height: auto;
     }
 
+    /* Anpassung für kleinere Bildschirme */
     .articleTitle {
         font-size: 24px;
     }
@@ -197,5 +194,20 @@ body {
 
     .infobContent {
         font-size: 12px;
+    }
+
+    /* Smoother und größerer Text beim Ausklappen */
+    .infobContent {
+        padding: 10px 20px;
+        transition: max-height 0.7s ease, padding 0.7s ease, color 0.5s ease;
+    }
+
+    /* Animations-Smoothness für die Infoblocks */
+    .infoblock {
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .infobblock.open .infobContent {
+        color: #000 !important; /* Textfarbe schwarz beim Öffnen */
     }
 }
