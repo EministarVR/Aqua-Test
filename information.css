@@ -34,28 +34,6 @@ body {
     color: #444; /* Leicht dunklerer Text für eine sanftere Lesbarkeit */
 }
 
-footer {
-    position: fixed;
-    left: 0;
-    bottom: -60px;
-    width: 100%;
-    text-align: center;
-    background-color: #00796b; /* Helles Teal für den Footer */
-    color: #f1f1f1; /* Heller Text für den Footer */
-    font-size: 15px;
-    font-family: 'Play', sans-serif;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    transition: bottom 0.3s ease-in-out;
-}
-
-footer.show {
-    bottom: 0;
-}
-
-footer p {
-    padding-top: 5px;
-}
 
 .infoblock {
     margin: 20px;
@@ -202,12 +180,7 @@ footer p {
         height: auto;
     }
 
-    footer {
-        font-size: 12px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
+   
     .articleTitle {
         font-size: 24px;
     }
