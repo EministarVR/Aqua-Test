@@ -5,7 +5,7 @@
 .newsArticle {
     min-height: 500px;
     background-color: white;
-    margin-top: 60px;
+    margin-top: 80px; /* Mehr Abstand zum Header */
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 40px;
@@ -13,6 +13,7 @@
     width: 60%;
     border-top: solid 5px rgb(212, 117, 0);
     border-bottom: solid 5px rgb(212, 117, 0);
+    color: black; /* Textfarbe auf schwarz gesetzt */
 }
 
 .articleTitle {
@@ -38,8 +39,6 @@
     margin: 30px;
 }
 
-
-
 .adm {
     vertical-align: 25px;
     font-size: 30px;
@@ -64,22 +63,51 @@
     color: goldenrod;
 }
 
+/* Optimierungen für größere Bildschirme */
 @media screen and (max-width: 1600px) {
-
     .newsArticle {
         margin-left: auto;
         margin-right: auto;
         width: 80%;
     }
-
 }
 
-@media screen and (max-width: 990px) {
-
+/* Optimierungen für mittlere Bildschirme (Laptops/Desktops) */
+@media screen and (max-width: 1200px) {
     .newsArticle {
         margin-left: auto;
         margin-right: auto;
-        width: 98%;
+        width: 75%;
+    }
+}
+
+/* Optimierungen für kleinere Bildschirme (Tablets und Smartphones) */
+@media screen and (max-width: 990px) {
+    .newsArticle {
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
     }
 
+    /* Anpassungen für den Text in der Artikelbeschreibung */
+    .articleDescription {
+        font-size: 14px;
+        padding: 0px 15px 10px 15px;
+    }
+
+    /* Anpassen der Schriftgrößen der Teammitglieder */
+    .adm, .modder, .helper, .builder {
+        font-size: 24px; /* Kleinere Schrift für mobile Geräte */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .articleTitle {
+        font-size: 32px; /* Kleinere Schriftgröße für den Titel auf kleinen Geräten */
+    }
+
+    /* Weitere Anpassungen für eine bessere mobile Ansicht */
+    .teamPlayers {
+        margin: 20px;
+    }
 }
