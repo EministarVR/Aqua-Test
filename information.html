@@ -216,37 +216,48 @@ body {
 }
 
 
-footer {
+.footerElement {
     text-align: center;
-    background-color: darkcyan;
-    color: white;
-    font-size: 15px;
+    background-color: #0e535c; /* Dunkler Cyan-Ton */
+    color: #ffffff; /* Weißer Text */
     font-family: 'Play', sans-serif;
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.2); /* Für eine leichte Tiefe */
+    padding: 20px 10px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Schatten für einen schwebenden Effekt */
+    border-radius: 15px 15px 0 0; /* Abgerundete Ecken nur oben */
+    position: relative;
+    margin-top: 40px;
 }
 
-footer .footerContent a {
-    color: white;
+.footerContent a {
+    color: #ffffff;
     text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    transition: color 0.3s ease; /* Sanfter Farbwechsel */
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
 }
 
-footer .footerContent a:hover {
-    color: #00FFFF; /* Helleres Cyan beim Hover */
+.footerContent a:hover {
+    color: #00d4ff; /* Heller Cyan-Ton beim Hover */
 }
 
-footer .footerContent p {
+.footerCopy {
     margin-top: 10px;
-    font-size: 13px;
-    color: #f1f1f1;
+    font-size: 12px;
+    color: #d6d6d6;
 }
 
+.footerElement::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 5px;
+    background-color: #00a3cc; /* Leuchtender Cyan-Ton */
+    border-radius: 10px;
+}
 
 </style>
 
@@ -347,11 +358,14 @@ Letztlich ist unser Rangsystem nicht nur eine Möglichkeit, den Fortschritt der 
                 
 
     
+<div class="footerElement">
     <div class="footerContent">
-        <a href="./impressum.html">Impressum</a> | 
-        <a href="./agb.html">AGB</a>
-        <p>&copy; AquaBuild. Alle Rechte vorbehalten.</p>
+        <a href="./impressum.html">Impressum</a>
+        <a href="./datenschutz.html">Datenschutz</a>
+        <a href="./discord.html">Kontakt</a>
     </div>
+    <p class="footerCopy">&copy; 2024 AquaBuild - Dein Minecraft-Server</p>
+</div>
 
 
             <script>
