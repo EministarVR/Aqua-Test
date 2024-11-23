@@ -398,12 +398,14 @@ Letztlich ist unser Rangsystem nicht nur eine Möglichkeit, den Fortschritt der 
 document.querySelectorAll('.infoblock').forEach(block => {
     block.addEventListener('click', () => {
         const content = block.querySelector('.infobContent');
-        if (content.style.maxHeight) {
+        if (content.style.maxHeight && content.style.maxHeight !== "0px") {
             content.style.maxHeight = null; // Einklappen
-            content.style.padding = "0 20px";
+            content.style.padding = "0 20px"; // Padding minimieren
+            block.classList.remove('open'); // Klasse entfernen, wenn der Block geschlossen ist
         } else {
             content.style.maxHeight = content.scrollHeight + "px"; // Ausklappen
-            content.style.padding = "20px 20px";
+            content.style.padding = "20px 20px"; // Padding aktivieren
+            block.classList.add('open'); // Klasse hinzufügen, wenn der Block geöffnet ist
         }
     });
 });
