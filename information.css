@@ -1,119 +1,213 @@
+/* Globale Stile */
 * {
     font-family: 'Play', sans-serif;
 }
 
-.newsArticle {
-    min-height: 500px;
-    background-color: white;
-    margin-top: 100px; /* Abstand zwischen dem Header und der News-Sektion nur auf mobilen Geräten */
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 40px;
+body {
+    background-color: #f8f8f8; /* Sehr helles Grau als Hintergrund */
+    color: #333; /* Dunkler Text für besseren Kontrast */
+    margin: 0;
+    padding: 0;
+}
+
+/* Artikel Bereich */
+.article {
+    min-height: 1000px;
+    background-color: #ffffff; /* Weißer Hintergrund für Artikel */
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-bottom: 80px;
     border-radius: 15px;
-    width: 60%;
+    width: 93%;
     border-top: solid 5px rgb(212, 117, 0);
     border-bottom: solid 5px rgb(212, 117, 0);
-    color: black; /* Textfarbe auf schwarz gesetzt */
 }
 
+/* Artikel Titel */
 .articleTitle {
     font-weight: bold;
-    text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     padding: 20px;
+    color: #FF6600; /* Kräftiges Orange für die Überschrift */
 }
 
+/* Artikel Beschreibung */
 .articleDescription {
     font-size: 16px;
     padding: 0px 20px 10px 20px;
     font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    color: black; /* Textfarbe der Beschreibung ebenfalls schwarz */
+    color: #444; /* Leicht dunklerer Text für eine sanftere Lesbarkeit */
 }
 
-.team {
-    text-align: center;
+/* Infoblock Styling */
+.infoblock {
+    margin: 20px;
+    width: auto;
+    border-radius: 15px;
+    background-color: rgb(243, 243, 243); /* Sehr helles Grau für den Infoblock */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Übergang für Hintergrundfarbe */
 }
 
-.teamPlayers {
-    display: inline-block;
-    margin: 30px;
+/* Infoblock Text Styling */
+.infoblockText {
+    padding: 20px;
+    padding-bottom: 0px;
 }
 
-.adm {
-    vertical-align: 25px;
-    font-size: 30px;
-    color: red;
+/* Infoblock Titel */
+.infobTitle {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FF6600; /* Orange für die Infoblock-Überschrift */
 }
 
-.modder {
-    vertical-align: 25px;
-    font-size: 30px;
-    color: greenyellow;
+/* Infoblock Beschreibung */
+.infobDescription {
+    font-size: 18px;
+    color: rgb(100, 100, 100); /* Neutraler Grauton für die Beschreibung */
 }
 
-.helper {
-    vertical-align: 25px;
-    font-size: 30px;
-    color: cyan;
+/* Ausgeklappter Infoblock Inhalt */
+.infobContent {
+    max-height: 0; /* Startet versteckt */
+    overflow: hidden; /* Überschüssiger Inhalt wird ausgeblendet */
+    transition: max-height 0.5s ease, padding 0.5s ease, color 0.3s ease; /* Smooth Animation */
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333 !important; /* Dunkler Text */
+    padding: 0 20px; /* Kein Padding, wenn versteckt */
 }
 
-.builder {
-    vertical-align: 25px;
-    font-size: 30px;
-    color: goldenrod;
+/* Schriftfarbe wird nur geändert, wenn der Text sichtbar ist */
+.infobblock.open .infobContent {
+    color: #000 !important; /* Setzt die Schriftfarbe auf schwarz, wenn der Block aufgeklappt ist */
 }
 
-/* Optimierungen für größere Bildschirme */
-@media screen and (max-width: 1600px) {
-    .newsArticle {
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
+/* Hover-Effekte für die Buttons */
+.infoblockButtonPurple,
+.infoblockButtonRed,
+.infoblockButtonGreen,
+.infoblockButtonYellow {
+    padding: 5px 17px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    margin: 10px;
+    margin-top: -30px;
+    margin-left: 95%;
+    color: white;
+    background-color: #6a0dad;
+    transition: background-color 0.3s ease; /* Weicher Hover-Effekt */
+}
+
+.infoblockButtonPurple:hover {
+    background-color: rgb(102, 0, 102);
+}
+
+.infoblockButtonRed:hover {
+    background-color: darkred;
+}
+
+.infoblockButtonGreen:hover {
+    background-color: darkgreen;
+}
+
+.infoblockButtonYellow:hover {
+    background-color: darkgoldenrod;
+}
+
+/* Media Queries für mobile Geräte */
+@media screen and (max-width: 1450px) {
+    .extra {
+        margin-right: 20px;
+    }
+
+    .tutorialVideo {
+        text-align: center;
     }
 }
 
-/* Optimierungen für mittlere Bildschirme (Laptops/Desktops) */
-@media screen and (max-width: 1200px) {
-    .newsArticle {
-        margin-left: auto;
-        margin-right: auto;
-        width: 75%;
+@media screen and (max-width: 975px) {
+
+    .article {
+        margin-left: 5%;
+        width: 90%;
+        margin-right: 5%;
     }
+
+    .extra {
+        display: none;
+    }
+
+    .infoblockButtonPurple,
+    .infoblockButtonRed,
+    .infoblockButtonGreen,
+    .infoblockButtonYellow {
+        margin-left: 93%;
+    }
+
 }
 
-/* Optimierungen für kleinere Bildschirme (Tablets und Smartphones) */
-@media screen and (max-width: 990px) {
-    .newsArticle {
-        margin-left: auto;
-        margin-right: auto;
-        width: 95%;
-        margin-top: 120px; /* Größerer Abstand auf kleinen Geräten */
+@media screen and (max-width: 620px) {
+
+    .article {
+        margin-left: 0%;
+        width: 100%;
+        padding: 10px;
     }
 
-    /* Anpassungen für den Text in der Artikelbeschreibung */
+    .extra {
+        display: none;
+    }
+
+    .infoblockButtonPurple,
+    .infoblockButtonRed,
+    .infoblockButtonGreen,
+    .infoblockButtonYellow {
+        margin-left: 89%;
+    }
+
+    .video iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Anpassung für kleinere Bildschirme */
+    .articleTitle {
+        font-size: 24px;
+    }
+
     .articleDescription {
         font-size: 14px;
-        padding: 0px 15px 10px 15px;
     }
 
-    /* Anpassen der Schriftgrößen der Teammitglieder */
-    .adm, .modder, .helper, .builder {
-        font-size: 24px; /* Kleinere Schrift für mobile Geräte */
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .newsArticle {
-        margin-top: 140px; /* Noch mehr Abstand auf sehr kleinen Geräten */
+    .infobTitle {
+        font-size: 20px;
     }
 
-    .articleTitle {
-        font-size: 32px; /* Kleinere Schriftgröße für den Titel auf kleinen Geräten */
+    .infobDescription {
+        font-size: 16px;
     }
 
-    /* Weitere Anpassungen für eine bessere mobile Ansicht */
-    .teamPlayers {
-        margin: 20px;
+    .infobContent {
+        font-size: 12px;
+    }
+
+    /* Smoother und größerer Text beim Ausklappen */
+    .infobContent {
+        padding: 10px 20px;
+        transition: max-height 0.7s ease, padding 0.7s ease, color 0.5s ease;
+    }
+
+    /* Animations-Smoothness für die Infoblocks */
+    .infoblock {
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .infobblock.open .infobContent {
+        color: #000 !important; /* Textfarbe schwarz beim Öffnen */
     }
 }
