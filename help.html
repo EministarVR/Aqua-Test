@@ -298,7 +298,32 @@ body {
 
         
     </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
 
+    // Toggle Menü bei Klick auf den Hamburger-Button
+    mobileMenuBtn.addEventListener('click', () => {
+        const isExpanded = mobileNav.classList.contains('active');
+        mobileNav.classList.toggle('active');
+
+        // Accessibility (Aria-Attribute)
+        mobileNav.setAttribute('aria-hidden', isExpanded ? 'true' : 'false');
+        mobileMenuBtn.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+    });
+
+    // Optional: Schließen des Menüs bei Klick außerhalb
+    document.addEventListener('click', (event) => {
+        if (!mobileMenuBtn.contains(event.target) && !mobileNav.contains(event.target)) {
+            mobileNav.classList.remove('active');
+            mobileNav.setAttribute('aria-hidden', 'true');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+});
+
+</script>
 </body>
 
 </html>
