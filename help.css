@@ -2,10 +2,14 @@
     font-family: 'Play', sans-serif;
 }
 
+body {
+    margin-top: 80px; /* Mehr Abstand zwischen Header und Body */
+}
+
 .newsArticle {
     min-height: 500px;
     background-color: white;
-    margin-top: 80px; /* Mehr Abstand zwischen Header und Artikel */
+    margin-top: 40px; /* Abstände nach oben für den Artikel */
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 40px;
